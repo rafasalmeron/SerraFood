@@ -2,7 +2,7 @@ import {View, Text, Image, ScrollView} from "react-native";
 import {useState} from "react";
 import Nav from "../../components/nav/Nav";
 import { styles } from './style';
-import {lojas} from "../../api/lojas";
+import {stores} from "../../api/lojas";
 import CardLoja from "../../components/cardLoja/CardLoja";
 import logoFood from '../../../../assets/LogoSerraFood3.png'
 
@@ -11,8 +11,8 @@ const Home = () => {
 
     const filteredStores =
         selectedCategory === 'Início'
-            ? lojas
-            : lojas.filter((lojas) => lojas.category === selectedCategory);
+            ? stores
+            : stores.filter((lojas) => lojas.category === selectedCategory);
 
     return (
         <ScrollView style={styles.mainContainer}>
