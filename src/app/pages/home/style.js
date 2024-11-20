@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         padding: 10,
         borderBottomWidth: 1,
-        borderColor: '#f0f0f0',
+        borderColor: '#ddd',
     },
     logo: {
         width: 62,
@@ -41,10 +41,5 @@ export const styles = StyleSheet.create({
     },
     storeList: {
         paddingHorizontal: 10,
-    },
-    footer: {
-        padding: 10,
-        backgroundColor: '#f8f8f8',
-        alignItems: 'center',
     },
 });
