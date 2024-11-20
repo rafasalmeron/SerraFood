@@ -1,4 +1,4 @@
-import {FlatList, Image, Pressable, Text, TouchableOpacity, View} from "react-native";
+import {FlatList, Image, Pressable, Text, View} from "react-native";
 import {styles} from "./style";
 import * as navigation from "expo-router/build/global-state/routing";
 import icon from '../../../../assets/icons8-discount-40.png'
@@ -10,7 +10,7 @@ const CardLoja = ({filtro}) => {
     };
 
     return (
-        <View style={styles.conteiner}>
+        // <View style={styles.conteiner}>
             <FlatList
                 data={filtro}
                 keyExtractor={(item) => item.id}
@@ -76,7 +76,7 @@ const CardLoja = ({filtro}) => {
                     <Text style={styles.emptyText}>Nenhuma loja encontrada.</Text>
                 }
             />
-        </View>
+       // </View>
     )
 }
 

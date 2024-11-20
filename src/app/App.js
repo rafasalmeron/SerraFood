@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {SafeAreaView, StyleSheet} from "react-native";
 import FooterTab from "./components/footerTab/FooterTab";
+import LoadingScreen from "./components/loadingScreen/LoadingScreen";
 
 const  App = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2100);
+    }, []);
+
     return (
         <SafeAreaView style={styles.container}>
-                <FooterTab />
+            {loading ? <LoadingScreen /> : <FooterTab />}
         </SafeAreaView>
     )
 }

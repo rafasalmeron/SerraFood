@@ -71,10 +71,10 @@ export const styles = StyleSheet.create({
     },
     storeItemPressed: {
         backgroundColor: '#f0f0f0',
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
+        boxShadow: '#000',
+        boxShadowOff: {width: 0, height: 2},
+        boxShadowOpacity: 0.1,
+        boxShadowRadius: 4,
         elevation: 2,
     },
     storeText: {

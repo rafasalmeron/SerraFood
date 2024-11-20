@@ -3,6 +3,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from "../../pages/home/home";
 import About from "../../pages/about/about";
+import Search from "../../pages/search/search";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -38,7 +39,7 @@ const FooterTab = () => {
                 />
                 <Tab.Screen
                     name="Buscar"
-                    component={About}
+                    component={Search}
                     options={{
                         tabBarLabel: 'Buscar',
                         tabBarIcon: ({ color }) => (
