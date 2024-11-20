@@ -1,11 +1,11 @@
 import React from 'react';
-import Home from "./pages/home/home";
 import {SafeAreaView, StyleSheet} from "react-native";
+import FooterTab from "./components/footerTab/FooterTab";
 
 const  App = () => {
     return (
         <SafeAreaView style={styles.container}>
-            <Home />
+                <FooterTab />
         </SafeAreaView>
     )
 }
