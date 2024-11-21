@@ -42,4 +42,16 @@ export const styles = StyleSheet.create({
     storeList: {
         paddingHorizontal: 10,
     },
+    image: {
+        width: 350,
+        height: 150,    
+        padding: 10,
+        borderRadius: 10,
+    },
+    separator: {
+        width: 10,
+    },
+    flat: {
+        padding: 15,
+    }
 });
