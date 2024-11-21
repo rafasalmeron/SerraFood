@@ -9,7 +9,7 @@ const handleNavigate = (item) => {
     navigation.navigate("DetalhesLoja", {loja: item});
 };
 const CardLojaProduto = ({store, onPressProduct}) => {
-    console.log('Store Teste:', store);
+
     return (
         <View style={styles.storeCard}>
             <Pressable

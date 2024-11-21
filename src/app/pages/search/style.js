@@ -40,8 +40,9 @@ export const styles = StyleSheet.create({
     },
     searchMessage: {
         padding: 16,
-        fontSize: 16,
-        color: '#555',
+        fontSize: 28,
+        color: '#333',
+        fontWeight: 'bold',
     },
     highlight: {
         color: 'red',
