@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { SafeAreaView, TextInput, View } from 'react-native';
+import {SafeAreaView, TextInput, View, Text, FlatList} from 'react-native';
 import { styles } from './style';
 import CardFilter from '../../components/cardFilter/CardFilter';
-import {useSearch} from "../../hooks/useSearch";
+import { useSearch } from "../../hooks/useSearch";
 import SearchTabs from "../../components/searchTab/SearchTab";
+import CardLojaProduto from "../../components/carLojaProduto/CardLojaProduto";
 
 const Search = () => {
     const { query, handleSearch, filteredStores, filteredProducts } = useSearch();
@@ -29,16 +30,37 @@ const Search = () => {
                 />
             </View>
 
+            {query ? (
+                <Text style={styles.searchMessage}>
+                    Buscando por <Text style={styles.highlight}>{query}</Text>
+                </Text>
+            ) : null}
+
             <SearchTabs
                 selectedTab={selectedTab}
                 onSelectTab={setSelectedTab}
             />
 
-            <CardFilter
-                data={selectedTab === 'stores' ? filteredStores : filteredProducts}
-                onPress={selectedTab === 'stores' ? navigateToStore : navigateToProduct}
-                type={selectedTab === 'stores' ? 'store' : 'product'}
-            />
+            {selectedTab === 'stores' ? (
+                <CardFilter
+                    data={filteredStores}
+                    onPress={navigateToStore}
+                    type="store"
+                />
+            ) : (
+                <FlatList
+                    data={filteredProducts}
+                    keyExtractor={(item) => item.id}
+                    renderItem={({ item }) => (
+                        <CardLojaProduto
+                            store={item}
+                            products={item.produtos}
+                            onPressProduct={navigateToProduct}
+                        />
+                    )}
+                    showsHorizontalScrollIndicator={false}
+                />
+            )}
         </SafeAreaView>
     );
 };

@@ -1,68 +1,40 @@
-import React from 'react';
-import { FlatList, TouchableOpacity, Text, View, Image, StyleSheet } from 'react-native';
+import {FlatList, TouchableOpacity, View} from "react-native";
+import CardLoja from "../cardLoja/CardLoja";
+import { styles } from "./style";
 
 const CardFilter = ({ data, onPress, type }) => {
+    const renderItem = ({ item }) => {
+        if (type === 'store') {
+            return (
+                <TouchableOpacity style={styles.resultItem} onPress={() => onPress(item.id)}>
+                    <CardLoja item={item} />
+                </TouchableOpacity>
+            );
+        } else if (type === 'product') {
+            return (
+                <View style={styles.storeContainer}>
+                    <Text style={styles.storeName}>{item.name}</Text>
+                    {item.produtos.map(product => (
+                        <TouchableOpacity
+                            key={product.id}
+                            style={styles.productItem}
+                            onPress={() => onPress(product.id)}
+                        >
+                            <Image source={{ uri: product.image }} style={styles.productImage} />
+                            <Text style={styles.productName}>{product.name}</Text>
+                        </TouchableOpacity>
+                    ))}
+                </View>
+            );
+        }
+    };
 
-  const renderItem = ({ item }) => (
-      <TouchableOpacity
-          style={styles.resultItem}
-          onPress={() => onPress(item.id)}
-      >
-        {type === 'store' ? (
-            <View style={styles.storeItem}>
-              <Image source={{ uri: item.logo }} style={styles.storeLogo} />
-              <Text style={styles.storeName}>{item.name}</Text>
-            </View>
-        ) : (
-            <View style={styles.productItem}>
-              <Image source={{ uri: item.photo }} style={styles.productImage} />
-              <Text style={styles.productName}>{item.name}</Text>
-            </View>
-        )}
-      </TouchableOpacity>
-  );
-
-  return (
-      <FlatList
-          data={data}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id.toString()}
-      />
-  );
+    return (
+        <FlatList
+            data={data}
+            renderItem={renderItem}
+            keyExtractor={item => item.id.toString()}
+        />
+    );
 };
-
-const styles = StyleSheet.create({
-  resultItem: {
-    marginBottom: 16,
-  },
-  storeItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  storeLogo: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    marginRight: 10,
-  },
-  storeName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  productItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  productImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 5,
-    marginRight: 10,
-  },
-  productName: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
-
 export default CardFilter;

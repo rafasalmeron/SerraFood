@@ -62,6 +62,87 @@ export const stores = [
                 description: "Pizza com molho de tomate, queijo mozzarella e fatias de pepperoni crocante.",
                 photo: "https://picsum.photos/200/300?random=54",
                 storeId: 2
+            },
+            {
+                id: 1004,
+                name: "Pizza Quatro Queijos",
+                price: 59.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, queijo gorgonzola, queijo parmesão e queijo provolone.",
+                photo: "https://picsum.photos/200/300?random=55",
+                storeId: 2
+            },
+            {
+                id: 1005,
+                name: "Pizza Calabresa",
+                price: 57.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
+                photo: "https://picsum.photos/200/300?random=56",
+                storeId: 2
+            },
+            {
+                id: 1006,
+                name: "Pizza Frango com Catupiry",
+                price: 62.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, frango desfiado e catupiry.",
+                photo: "https://picsum.photos/200/300?random=57",
+                storeId: 2
+            },
+            {
+                id: 1007,
+                name: "Pizza Portuguesa",
+                price: 64.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, presunto, ovo, azeitona e cebola.",
+                photo: "https://picsum.photos/200/300?random=58",
+                storeId: 2
+            },
+            {
+                id: 1008,
+                name: "Pizza Vegetariana",
+                price: 56.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, brócolis, cogumelos e pimentão.",
+                photo: "https://picsum.photos/200/300?random=59",
+                storeId: 2
+            },
+            {
+                id: 1009,
+                name: "Pizza Frutos do Mar",
+                price: 67.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, camarão, lula e molho branco.",
+                photo: "https://picsum.photos/200/300?random=60",
+                storeId: 2
+            },
+            {
+                id: 1010,
+                name: "Pizza de Carne Seca",
+                price: 63.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella e carne seca desfiada.",
+                photo: "https://picsum.photos/200/300?random=61",
+                storeId: 2
+            },
+            {
+                id: 1011,
+                name: "Pizza de Bacon com Cheddar",
+                price: 61.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, bacon crocante e cheddar.",
+                photo: "https://picsum.photos/200/300?random=62",
+                storeId: 2
+            },
+            {
+                id: 1012,
+                name: "Pizza de Pepperoni com Bacon",
+                price: 65.99,
+                category: "Pizzas",
+                description: "Pizza com molho de tomate, queijo mozzarella, pepperoni e bacon crocante.",
+                photo: "https://picsum.photos/200/300?random=63",
+                storeId: 2
             }
         ]
     },
@@ -1597,6 +1678,105 @@ export const stores = [
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface, tomate e maionese.",
                 photo: "https://picsum.photos/200/300?random=108",
+                storeId: 50
+            },
+            {
+                id: 1058,
+                name: "Cheeseburger Gourmet",
+                price: 29.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de carne bovina com queijo cheddar, cebola caramelizada e maionese especial.",
+                photo: "https://picsum.photos/200/300?random=109",
+                storeId: 50
+            },
+            {
+                id: 1059,
+                name: "Hambúrguer de Frango",
+                price: 22.99,
+                category: "Hambúrgueres",
+                description: "Pão com hambúrguer de frango, alface, tomate e maionese.",
+                photo: "https://picsum.photos/200/300?random=110",
+                storeId: 50
+            },
+            {
+                id: 1060,
+                name: "Cheeseburger Duplo",
+                price: 35.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer duplo com queijo cheddar, bacon crocante, alface e molho barbecue.",
+                photo: "https://picsum.photos/200/300?random=111",
+                storeId: 50
+            },
+            {
+                id: 1061,
+                name: "X-Bacon",
+                price: 27.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de carne bovina com bacon crocante, queijo cheddar e molho especial.",
+                photo: "https://picsum.photos/200/300?random=112",
+                storeId: 50
+            },
+            {
+                id: 1062,
+                name: "X-Tudo",
+                price: 29.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer com carne bovina, frango, queijo, bacon, ovo, alface, tomate e maionese.",
+                photo: "https://picsum.photos/200/300?random=113",
+                storeId: 50
+            },
+            {
+                id: 1063,
+                name: "Burguer de Picanha",
+                price: 34.99,
+                category: "Hambúrgueres",
+                description: "Pão com hambúrguer de picanha, queijo cheddar, cebola roxa e molho de mostarda e mel.",
+                photo: "https://picsum.photos/200/300?random=114",
+                storeId: 50
+            },
+            {
+                id: 1064,
+                name: "Burguer Vegano",
+                price: 24.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de grão de bico com alface, tomate e molho vegano.",
+                photo: "https://picsum.photos/200/300?random=115",
+                storeId: 50
+            },
+            {
+                id: 1065,
+                name: "Hambúrguer de Peixe",
+                price: 27.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de peixe empanado com molho tártaro, alface e cebola roxa.",
+                photo: "https://picsum.photos/200/300?random=116",
+                storeId: 50
+            },
+            {
+                id: 1066,
+                name: "X-Queijo",
+                price: 21.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de carne bovina com queijo prato, alface e ketchup.",
+                photo: "https://picsum.photos/200/300?random=117",
+                storeId: 50
+            },
+            {
+                id: 1067,
+                name: "Hambúrguer de Carne Suína",
+                price: 28.99,
+                category: "Hambúrgueres",
+                description: "Pão com hambúrguer de carne suína, molho de mostarda e picles.",
+                photo: "https://picsum.photos/200/300?random=118",
+                storeId: 50
+            },
+            {
+                id: 1068,
+                name: "Cheeseburger Bacon",
+                price: 32.99,
+                category: "Hambúrgueres",
+                description: "Hambúrguer de carne bovina com queijo cheddar e bacon crocante.",
+                photo: "https://picsum.photos/200/300?random=119",
                 storeId: 50
             }
         ]

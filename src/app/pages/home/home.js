@@ -1,4 +1,4 @@
-import {View, Text, Image, ScrollView} from "react-native";
+import {View, Text, Image, ScrollView, FlatList} from "react-native";
 import {useState} from "react";
 import Nav from "../../components/nav/Nav";
 import { styles } from './style';
@@ -30,10 +30,17 @@ const Home = () => {
 
             <Text style={styles.lojaText}>Lojas</Text>
 
-            <CardLoja
-                filtro={filteredStores}
+            <FlatList
+                data={filteredStores}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => (
+                    <CardLoja item={item} />
+                )}
+                ListEmptyComponent={
+                    <Text style={styles.emptyText}>Nenhuma loja encontrada.</Text>
+                }
+                contentContainerStyle={styles.storeList}
             />
-
         </ScrollView>
     )
 }

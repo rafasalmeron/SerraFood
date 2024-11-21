@@ -14,12 +14,20 @@ export const useSearch = () => {
             store.category.toLowerCase().includes(text.toLowerCase())
         );
 
-        const filteredProductsResults = stores.flatMap(store =>
-            store.produtos.filter(product =>
-                product.name.toLowerCase().includes(text.toLowerCase()) ||
-                product.description.toLowerCase().includes(text.toLowerCase())
-            )
-        );
+        const filteredProductsResults = stores
+            .map(store => {
+                const filteredItems = store.produtos.filter(product =>
+                    product.name.toLowerCase().includes(text.toLowerCase()) ||
+                    product.description.toLowerCase().includes(text.toLowerCase())
+                );
+
+                if (filteredItems.length > 0) {
+                    return { ...store, produtos: filteredItems };
+                }
+
+                return null;
+            })
+            .filter(store => store !== null);
 
         setFilteredStores(filteredStoresResults);
         setFilteredProducts(filteredProductsResults);

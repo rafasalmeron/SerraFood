@@ -1,22 +1,30 @@
-import {StyleSheet} from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     tabsContainer: {
         flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
         marginBottom: 16,
     },
     tab: {
         flex: 1,
-        padding: 10,
         alignItems: 'center',
-        backgroundColor: '#f0f0f0',
-        borderRadius: 8,
+        paddingVertical: 14,
+        marginHorizontal: 5,
+        borderBottomWidth: 1,
+        borderBottomColor: 'transparent',
     },
     activeTab: {
-        backgroundColor: '#ddd',
+        borderBottomWidth: 1,
+        borderBottomColor: 'red',
     },
     tabText: {
         fontSize: 16,
+        color: '#333',
         fontWeight: 'bold',
+    },
+    activeTabText: {
+        color: 'red',
     },
 });
