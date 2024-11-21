@@ -18,12 +18,11 @@ export const styles = StyleSheet.create({
         flexWrap: 'wrap',
     },
     productItem: {
-        width: '48%',
         marginBottom: 16,
     },
     productImage: {
-        width: '100%',
-        height: 100,
+        width: 150,
+        height: 120,
         borderRadius: 8,
     },
     productName: {

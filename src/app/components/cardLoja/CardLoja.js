@@ -1,4 +1,4 @@
-import { FlatList, Image, Pressable, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { styles } from "./style";
 import icon from '../../../../assets/icons8-discount-40.png';
 
