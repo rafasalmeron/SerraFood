@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 5,
         borderBottomWidth: 1,
-        borderColor: '#ddd',
+        borderBottomColor: '#ddd',
         alignItems: 'center',
     },
     categoryButton: {

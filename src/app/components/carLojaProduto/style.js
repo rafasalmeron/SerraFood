@@ -1,6 +1,36 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from "react-native";
 
 export const styles = StyleSheet.create({
+    storeCard: {
+        flex: 1,
+        width: '100%',
+        flexDirection: 'column',
+        marginBottom: 10,
+        borderRadius: 8,
+        padding: 10,
+        backgroundColor: '#fff',
+    },
+    storeInfo: {
+        flexDirection: 'row',
+        marginBottom: 10,
+    },
+    storeLogo: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        marginRight: 10,
+    },
+    storeName: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    storeDetails: {
+        fontSize: 12,
+        color: '#777',
+    },
+    productsContainer: {
+        marginTop: 10,
+    },
     conteiner: {
         backgroundColor: '#fff',
         flex: 1,
@@ -16,8 +46,11 @@ export const styles = StyleSheet.create({
         paddingBottom: 5,
     },
     content3: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        width: '100%',
+        justifyContent: 'space-between',
     },
     text2: {
         fontFamily: 'Roboto',
@@ -38,6 +71,8 @@ export const styles = StyleSheet.create({
         backgroundColor: '#eef3f5',
         borderRadius: 5,
         padding: 3,
+        width: '100%',
+        textAlign: 'center',
     },
     iconDiscount: {
         width: 15,
@@ -48,8 +83,8 @@ export const styles = StyleSheet.create({
         backgroundColor: '#939393',
     },
     logoLojas: {
-        width: 65,
-        height: 65,
+        width: 70,
+        height: 70,
         marginRight: 10,
         borderRadius: 50,
     },
@@ -63,12 +98,14 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     storeItem: {
-        flexDirection: 'row',
+        flex: 1,
+        width: '100%',
+        flexDirection: 'column',
         backgroundColor: '#fff',
         padding: 15,
         borderRadius: 8,
         marginBottom: 10,
-        width: '100%',
+
     },
     storeItemPressed: {
         backgroundColor: '#f0f0f0',
@@ -85,7 +122,6 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         paddingRight: 20,
         width: 230,
-
     },
     emptyText: {
         textAlign: 'center',

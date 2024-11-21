@@ -4,6 +4,8 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 16,
+        width: '100%',
+        backgroundColor: '#fff',
     },
     searchContainer: {
         flexDirection: 'row',
@@ -34,6 +36,15 @@ export const styles = StyleSheet.create({
     },
     tabText: {
         fontSize: 16,
+        fontWeight: 'bold',
+    },
+    searchMessage: {
+        padding: 16,
+        fontSize: 16,
+        color: '#555',
+    },
+    highlight: {
+        color: 'red',
         fontWeight: 'bold',
     },
 });
