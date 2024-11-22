@@ -4,6 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Home from "../../pages/home/home";
 import About from "../../pages/about/about";
 import Search from "../../pages/search/search";
+import CartPage from "../../pages/carrinho/CartPage";
 import Perfil from "../../pages/perfil/perfil";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -27,7 +28,7 @@ const FooterTab = () => {
                     component={Home}
                     options={{
                         tabBarLabel: 'Home',
-                        tabBarIcon: ({ color}) => (
+                        tabBarIcon: ({ color }) => (
                             <MaterialCommunityIcons
                                 name="home"
                                 color={color}
@@ -49,6 +50,17 @@ const FooterTab = () => {
                         tabBarActiveBackgroundColor: 'transparent',
                         tabBarInactiveBackgroundColor: 'transparent',
 
+                    }}
+                />
+
+                <Tab.Screen
+                    name="Carrinho"
+                    component={CartPage}
+                    options={{
+                        tabBarLabel: 'Carrinho',
+                        tabBarIcon: ({ color }) => (<MaterialCommunityIcons name="bag-personal" color={color} size={26} />),
+                        tabBarActiveBackgroundColor: 'transparent',
+                        tabBarInactiveBackgroundColor: 'transparent',
                     }}
                 />
                 <Tab.Screen
