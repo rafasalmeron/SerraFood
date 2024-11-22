@@ -10,7 +10,7 @@ const schema = Yup.object().shape({
   password: Yup.string().required('Senha é obrigatória'),
 });
 
-const LoginScreen = () => {
+const Login = () => {
   const { control, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
@@ -72,4 +72,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default Login;
