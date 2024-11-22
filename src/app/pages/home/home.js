@@ -11,11 +11,11 @@ const Home = () => {
   const imagens = [
     {
       id: 1,
-      url: 'https://picsum.photos/350/150?random=1',
+      url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOffRNAGCAONsiYnLApY_u31MLeCm-PZREKRT2noftZzhinIGCFF4wvjthtsNYiNQlAc1Adq-hBdcBt0G1O-737JEfR0HJkxzk1pQE_B2w2ZY8yMJ1k6AgLgWyThOEGPSgumaAEzHjLQaQ/s900/Promo%25C3%25A7%25C3%25A3o-Ifood-Tudo-Por-Apenas-0%252C99.webp',
     },
     {
       id: 2,
-      url: 'https://picsum.photos/350/150?random=2',
+      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ2iEqrb8Zw_qA0LI9nUjWne87N4zC3ZgPYA&s',
     },
     {
       id: 3,

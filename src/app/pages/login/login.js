@@ -4,6 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import * as Yup from 'yup';
 import { styles } from './style';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { autenticarUsuario, buscarUsuario } from '../../api/loginApi';
 
 const schema = Yup.object().shape({
   email: Yup.string().email('E-mail inválido').required('E-mail é obrigatório'),
@@ -15,8 +16,20 @@ const LoginScreen = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    Alert.alert('Login bem-sucedido!', `Bem-vindo, ${data.email}!`);
+  const onSubmit = async (data) => {
+    console.log(data)
+    try {
+        const response = await buscarUsuario();
+        console.log(response)
+        if (response) {
+            console.log(response.find(user => {
+              return user.email === data.email && user.password === data.password
+            }))
+        }
+        Alert.alert('Login bem-sucedido!', `Bem-vindo, ${response.name || 'Usuário'}!`);
+    } catch (error) {
+      Alert.alert('Erro', error.message || 'Falha na autenticação.');
+    }
   };
 
   return (
