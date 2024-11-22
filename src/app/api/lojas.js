@@ -11,7 +11,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1000,
@@ -43,7 +43,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Pizzas',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1002,
@@ -156,7 +156,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Japonesa',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1004,
@@ -188,7 +188,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: 'Desconto de 10% em todas as massas',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1006,
@@ -220,7 +220,7 @@ export const stores = [
         tempoPreparo: '10-15 min',
         category: 'Doces',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1008,
@@ -252,7 +252,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 20% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1010,
@@ -284,7 +284,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1012,
@@ -316,7 +316,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Cupom de R$ 15,00',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1014,
@@ -348,7 +348,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1016,
@@ -380,7 +380,7 @@ export const stores = [
         tempoPreparo: '10-20 min',
         category: 'Lanches',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1018,
@@ -412,7 +412,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1020,
@@ -444,7 +444,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1022,
@@ -476,7 +476,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1024,
@@ -508,7 +508,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1026,
@@ -540,7 +540,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1028,
@@ -572,7 +572,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 10,00 disponível',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1030,
@@ -604,7 +604,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1032,
@@ -636,7 +636,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Japonesa',
         cupom: 'Desconto de 20%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1034,
@@ -668,7 +668,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1036,
@@ -700,7 +700,7 @@ export const stores = [
         tempoPreparo: '10-15 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1038,
@@ -732,7 +732,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1040,
@@ -764,7 +764,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Desconto de 15%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1042,
@@ -796,7 +796,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1044,
@@ -828,7 +828,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Lanches',
         cupom: 'Cupom de 5% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1046,
@@ -860,7 +860,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1048,
@@ -892,7 +892,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1050,
@@ -924,7 +924,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1052,
@@ -956,7 +956,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Desconto de 10%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1054,
@@ -988,7 +988,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1056,
@@ -1020,7 +1020,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 20,00',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1058,
@@ -1052,7 +1052,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1060,
@@ -1084,7 +1084,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1062,
@@ -1116,7 +1116,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1064,
@@ -1148,7 +1148,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Lanches',
         cupom: 'Desconto de 15%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1066,
@@ -1180,7 +1180,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1068,
@@ -1212,7 +1212,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 20% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1070,
@@ -1244,7 +1244,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1072,
@@ -1276,7 +1276,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Desconto de 10%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1074,
@@ -1308,7 +1308,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1076,
@@ -1340,7 +1340,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Lanches',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1078,
@@ -1372,7 +1372,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1080,
@@ -1404,7 +1404,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Desconto de 5%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1082,
@@ -1436,7 +1436,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1084,
@@ -1468,7 +1468,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Japonesa',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1086,
@@ -1500,7 +1500,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1088,
@@ -1532,7 +1532,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Hambúrgueres',
         cupom: 'Desconto de 10%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1090,
@@ -1564,7 +1564,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1056,
@@ -1596,7 +1596,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 15%',
-        lojaSuper: '',
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1056,
@@ -1628,7 +1628,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1056,
@@ -1660,7 +1660,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 10,00 disponível',
-        lojaSuper: img,
+        lojaSuper: 'https://picsum.photos/200/300?random=1',
         produtos: [
             {
                 id: 1056,

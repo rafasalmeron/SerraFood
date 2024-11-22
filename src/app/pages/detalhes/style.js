@@ -35,12 +35,12 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   cupomContainer: {
-    marginTop: 10,
-    padding: 10,
-    backgroundColor: '#f0f8ff',
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // marginTop: 10,
+    // padding: 10,
+    // backgroundColor: '#f0f8ff',
+    // borderRadius: 5,
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   
   cupomTexto: {
@@ -98,6 +98,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginLeft: 20,
+    marginTop: 15,
     marginBottom: 15,
   },
   cardProduto: {
