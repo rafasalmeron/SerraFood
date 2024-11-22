@@ -1,34 +1,35 @@
-import { StyleSheet, Dimensions } from 'react-native';
+// src/style.js
+import { StyleSheet } from 'react-native';
 
-const { height } = Dimensions.get('window');
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
+export const styles = StyleSheet.create({
   topSection: {
-    height: (height * 2) / 3,
-    backgroundColor: '#4CAF50',
+    flex: 1,
+    justifyContent: 'flex-end',
   },
   bottomSection: {
-    height: height / 3,
-    borderTopLeftRadius: 100,
-    borderTopRightRadius: 100,
+    height: '25%', 
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+    backgroundColor: '#ddd',
     padding: 20,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   spacing: {
     height: 20,
   },
   button: {
-    backgroundColor: '#d50132',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
+    backgroundColor: '#FFFFFF',
+    width: '95%',
+    height: 50,
     borderRadius: 10,
     alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: '#d50132',
+  },  
+  buttonText: {
+    color: 'black',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
-
-export default styles;

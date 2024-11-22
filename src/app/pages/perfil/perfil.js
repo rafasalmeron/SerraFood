@@ -1,23 +1,35 @@
 import React from 'react';
-import { View, Button, ImageBackground } from 'react-native';
-import styles from './style'; 
-import fundo from 'C:/Users/dudmo/OneDrive/Documentos/serratec-2024-2/front/SerraFood/assets/fundo.png';
+import { View, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import { styles } from './style';
+import fundo from '../../../../assets/fundo.png';
 
-const App = () => {
+
+const Perfil = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <ImageBackground 
-        source={fundo} 
+    <View style={{ flex: 1 }}>
+      <ImageBackground
+        source={fundo}
         style={styles.topSection}
         resizeMode="cover"
-      />
-      <View style={styles.bottomSection}>
-        <Button title="Botão 1" onPress={() => alert('Botão 1 pressionado')} />
-        <View style={styles.spacing} />
-        <Button title="Botão 2" onPress={() => alert('Botão 2 pressionado')} />
-      </View>
+      >
+        <View style={styles.bottomSection}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Login')}
+          >
+          <Text style={styles.buttonText}> Já tenho conta </Text>
+          </TouchableOpacity>
+          <View style={styles.spacing} />
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate('Cadastro')}
+          >
+            <Text style={styles.buttonText}>Criar nova conta</Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
 
-export default App;
+export default Perfil;
