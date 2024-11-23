@@ -4,15 +4,20 @@ const api = axios.create({
   baseURL: 'https://6740b24bd0b59228b7f1096e.mockapi.io/api/v1', 
 });
 
-export const adicionarUsuario = async (users) => {
-    try {
-        const response = await api.post('/api/v1/users', users)
-        return response.data
-    } catch (error) {
-        console.error('erro ao criar o usuario')
-        throw error;
-    }
+export const adicionarUsuario = async (user) => {
+  try {
+    const response = await api.post('/users/users', user); 
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao criar o usuário:", {
+      mensagem: error.message,
+      resposta: error.response?.data,
+      status: error.response?.status,
+    });
+    throw error;
+  }
 };
+
 
 export const buscarUsuario = async () => {
     try {
