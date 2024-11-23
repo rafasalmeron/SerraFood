@@ -73,7 +73,7 @@ Exemplo: /home/administrador/Documents/Serratec-2024-2/React-Native/SerraFood
 
 Isso abrirá o Expo Dev Tools no seu navegador, onde você pode rodar o aplicativo em um emulador ou dispositivo físico.
 
-# <a href="https://github.com/delmiraugusto/projetoReact/graphs/contributors" target="_blank">Contribuidores</a>
+# <a href="https://github.com/rafasalmeron/SerraFood/graphs/contributors" target="_blank">Contribuidores</a>
 <table>
   <tr>
     <td align="center">
