@@ -3,7 +3,7 @@ import img from '../../../assets/star.png';
 export const stores = [
     {
         id: '1',
-        logo: 'https://picsum.photos/200/300?random=1',
+        logo: 'https://loremflickr.com/200/300/food?lock=1',
         name: 'Hambúrgueria Top',
         star: 4.5,
         frete: 'Gratis',
@@ -11,7 +11,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=99',
         produtos: [
             {
                 id: 1000,
@@ -19,7 +19,7 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne 100% bovina com queijo cheddar, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=51",
+                photo: "https://loremflickr.com/200/300/food?lock=51",
                 storeId: 1
             },
             {
@@ -28,14 +28,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=52",
+                photo: "https://loremflickr.com/200/300/food?lock=52",
                 storeId: 1
             }
         ]
     },
     {
         id: '2',
-        logo: 'https://picsum.photos/200/300?random=2',
+        logo: 'https://loremflickr.com/200/300/food?lock=2',
         name: 'Pizzaria Italiana',
         star: 4.7,
         frete: 'Gratis',
@@ -43,7 +43,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Pizzas',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=98',
         produtos: [
             {
                 id: 1002,
@@ -51,7 +51,7 @@ export const stores = [
                 price: 49.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, manjericão fresco e azeite.",
-                photo: "https://picsum.photos/200/300?random=53",
+                photo: "https://loremflickr.com/200/300/food?lock=53",
                 storeId: 2
             },
             {
@@ -60,7 +60,7 @@ export const stores = [
                 price: 55.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e fatias de pepperoni crocante.",
-                photo: "https://picsum.photos/200/300?random=54",
+                photo: "https://loremflickr.com/200/300/food?lock=54",
                 storeId: 2
             },
             {
@@ -69,7 +69,7 @@ export const stores = [
                 price: 59.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, queijo gorgonzola, queijo parmesão e queijo provolone.",
-                photo: "https://picsum.photos/200/300?random=55",
+                photo: "https://loremflickr.com/200/300/food?lock=55",
                 storeId: 2
             },
             {
@@ -78,7 +78,7 @@ export const stores = [
                 price: 57.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=56",
+                photo: "https://loremflickr.com/200/300/food?lock=56",
                 storeId: 2
             },
             {
@@ -87,7 +87,7 @@ export const stores = [
                 price: 62.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, frango desfiado e catupiry.",
-                photo: "https://picsum.photos/200/300?random=57",
+                photo: "https://loremflickr.com/200/300/food?lock=57",
                 storeId: 2
             },
             {
@@ -96,7 +96,7 @@ export const stores = [
                 price: 64.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, presunto, ovo, azeitona e cebola.",
-                photo: "https://picsum.photos/200/300?random=58",
+                photo: "https://loremflickr.com/200/300/food?lock=58",
                 storeId: 2
             },
             {
@@ -105,7 +105,7 @@ export const stores = [
                 price: 56.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, brócolis, cogumelos e pimentão.",
-                photo: "https://picsum.photos/200/300?random=59",
+                photo: "https://loremflickr.com/200/300/food?lock=59",
                 storeId: 2
             },
             {
@@ -114,7 +114,7 @@ export const stores = [
                 price: 67.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, camarão, lula e molho branco.",
-                photo: "https://picsum.photos/200/300?random=60",
+                photo: "https://loremflickr.com/200/300/food?lock=60",
                 storeId: 2
             },
             {
@@ -123,7 +123,7 @@ export const stores = [
                 price: 63.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e carne seca desfiada.",
-                photo: "https://picsum.photos/200/300?random=61",
+                photo: "https://loremflickr.com/200/300/food?lock=61",
                 storeId: 2
             },
             {
@@ -132,7 +132,7 @@ export const stores = [
                 price: 61.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, bacon crocante e cheddar.",
-                photo: "https://picsum.photos/200/300?random=62",
+                photo: "https://loremflickr.com/200/300/food?lock=62",
                 storeId: 2
             },
             {
@@ -141,14 +141,14 @@ export const stores = [
                 price: 65.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, pepperoni e bacon crocante.",
-                photo: "https://picsum.photos/200/300?random=63",
+                photo: "https://loremflickr.com/200/300/food?lock=63",
                 storeId: 2
             }
         ]
     },
     {
         id: '3',
-        logo: 'https://picsum.photos/200/300?random=3',
+        logo: 'https://loremflickr.com/200/300/food?lock=3',
         name: 'Sushi Master',
         star: 4.8,
         frete: 'R$ 6,00',
@@ -156,7 +156,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Japonesa',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=97',
         produtos: [
             {
                 id: 1004,
@@ -164,7 +164,7 @@ export const stores = [
                 price: 34.99,
                 category: "Japonesa",
                 description: "Combinado de sushi com salmão, atum, e camarões frescos.",
-                photo: "https://picsum.photos/200/300?random=55",
+                photo: "https://loremflickr.com/200/300/food?lock=55",
                 storeId: 3
             },
             {
@@ -173,14 +173,14 @@ export const stores = [
                 price: 21.99,
                 category: "Japonesa",
                 description: "Temaki recheado com salmão fresco, alga nori e arroz temperado.",
-                photo: "https://picsum.photos/200/300?random=56",
+                photo: "https://loremflickr.com/200/300/food?lock=56",
                 storeId: 3
             }
         ]
     },
     {
         id: '4',
-        logo: 'https://picsum.photos/200/300?random=4',
+        logo: 'https://loremflickr.com/200/300/food?lock=4',
         name: 'Pasta House',
         star: 4.4,
         frete: 'Gratis',
@@ -188,7 +188,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: 'Desconto de 10% em todas as massas',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=96',
         produtos: [
             {
                 id: 1006,
@@ -196,7 +196,7 @@ export const stores = [
                 price: 39.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=57",
+                photo: "https://loremflickr.com/200/300/food?lock=57",
                 storeId: 4
             },
             {
@@ -205,14 +205,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne bovina, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=58",
+                photo: "https://loremflickr.com/200/300/food?lock=58",
                 storeId: 4
             }
         ]
     },
     {
         id: '5',
-        logo: 'https://picsum.photos/200/300?random=5',
+        logo: 'https://loremflickr.com/200/300/food?lock=5',
         name: 'Doces da Vovó',
         star: 4.9,
         frete: 'Gratis',
@@ -220,7 +220,7 @@ export const stores = [
         tempoPreparo: '10-15 min',
         category: 'Doces',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=95',
         produtos: [
             {
                 id: 1008,
@@ -228,7 +228,7 @@ export const stores = [
                 price: 29.99,
                 category: "Doces",
                 description: "Bolo de chocolate com cobertura de brigadeiro e granulado.",
-                photo: "https://picsum.photos/200/300?random=59",
+                photo: "https://loremflickr.com/200/300/food?lock=59",
                 storeId: 5
             },
             {
@@ -237,14 +237,14 @@ export const stores = [
                 price: 19.99,
                 category: "Doces",
                 description: "Brigadeiro tradicional com cobertura de chocolate belga.",
-                photo: "https://picsum.photos/200/300?random=60",
+                photo: "https://loremflickr.com/200/300/food?lock=60",
                 storeId: 5
             }
         ]
     },
     {
         id: '6',
-        logo: 'https://picsum.photos/200/300?random=6',
+        logo: 'https://loremflickr.com/200/300/food?lock=52',
         name: 'Hamburgueria do João',
         star: 4.2,
         frete: 'R$ 7,00',
@@ -252,7 +252,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 20% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=94',
         produtos: [
             {
                 id: 1010,
@@ -260,7 +260,7 @@ export const stores = [
                 price: 21.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de frango grelhado com queijo prato, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=61",
+                photo: "https://loremflickr.com/200/300/food?lock=61",
                 storeId: 6
             },
             {
@@ -269,14 +269,14 @@ export const stores = [
                 price: 31.99,
                 category: "Hambúrgueres",
                 description: "Dois hambúrgueres de carne bovina com queijo cheddar e bacon.",
-                photo: "https://picsum.photos/200/300?random=62",
+                photo: "https://loremflickr.com/200/300/food?lock=62",
                 storeId: 6
             }
         ]
     },
     {
         id: '7',
-        logo: 'https://picsum.photos/200/300?random=7',
+        logo: 'https://loremflickr.com/200/300/food?lock=7',
         name: 'Pizzaria Bella Napoli',
         star: 4.6,
         frete: 'Gratis',
@@ -284,7 +284,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=94',
         produtos: [
             {
                 id: 1012,
@@ -292,7 +292,7 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=63",
+                photo: "https://loremflickr.com/200/300/food?lock=63",
                 storeId: 7
             },
             {
@@ -301,14 +301,14 @@ export const stores = [
                 price: 49.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella, frango desfiado e catupiry.",
-                photo: "https://picsum.photos/200/300?random=64",
+                photo: "https://loremflickr.com/200/300/food?lock=64",
                 storeId: 7
             }
         ]
     },
     {
         id: '8',
-        logo: 'https://picsum.photos/200/300?random=8',
+        logo: 'https://loremflickr.com/200/300/food?lock=8',
         name: 'Sushi Place',
         star: 4.3,
         frete: 'R$ 5,50',
@@ -316,7 +316,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Cupom de R$ 15,00',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=93',
         produtos: [
             {
                 id: 1014,
@@ -324,7 +324,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=65",
+                photo: "https://loremflickr.com/200/300/food?lock=65",
                 storeId: 8
             },
             {
@@ -333,14 +333,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=66",
+                photo: "https://loremflickr.com/200/300/food?lock=66",
                 storeId: 8
             }
         ]
     },
     {
         id: '9',
-        logo: 'https://picsum.photos/200/300?random=9',
+        logo: 'https://loremflickr.com/200/300/food?lock=9',
         name: 'Massas Italianas',
         star: 4.4,
         frete: 'Gratis',
@@ -348,7 +348,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=92',
         produtos: [
             {
                 id: 1016,
@@ -356,7 +356,7 @@ export const stores = [
                 price: 47.99,
                 category: "Massas",
                 description: "Massa fresca com molho bolonhesa, queijo e presunto.",
-                photo: "https://picsum.photos/200/300?random=67",
+                photo: "https://loremflickr.com/200/300/food?lock=67",
                 storeId: 9
             },
             {
@@ -365,14 +365,14 @@ export const stores = [
                 price: 39.99,
                 category: "Massas",
                 description: "Massa fresca recheada com queijo e molho de tomate.",
-                photo: "https://picsum.photos/200/300?random=68",
+                photo: "https://loremflickr.com/200/300/food?lock=68",
                 storeId: 9
             }
         ]
     },
     {
         id: '10',
-        logo: 'https://picsum.photos/200/300?random=10',
+        logo: 'https://loremflickr.com/200/300/food?lock=59',
         name: 'Lanchonete Express',
         star: 4.1,
         frete: 'R$ 4,00',
@@ -380,7 +380,7 @@ export const stores = [
         tempoPreparo: '10-20 min',
         category: 'Lanches',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=91',
         produtos: [
             {
                 id: 1018,
@@ -388,7 +388,7 @@ export const stores = [
                 price: 14.99,
                 category: "Lanches",
                 description: "Pão com salsicha, molho de tomate, milho, ervilha e batata palha.",
-                photo: "https://picsum.photos/200/300?random=69",
+                photo: "https://loremflickr.com/200/300/food?lock=69",
                 storeId: 10
             },
             {
@@ -397,14 +397,14 @@ export const stores = [
                 price: 12.99,
                 category: "Lanches",
                 description: "Pão de forma com queijo e presunto, grelhado na chapa.",
-                photo: "https://picsum.photos/200/300?random=70",
+                photo: "https://loremflickr.com/200/300/food?lock=70",
                 storeId: 10
             }
         ]
     },
     {
         id: '11',
-        logo: 'https://picsum.photos/200/300?random=11',
+        logo: 'https://loremflickr.com/200/300/food?lock=70',
         name: 'Churrascaria do Zé',
         star: 4.7,
         frete: 'Gratis',
@@ -412,7 +412,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=90',
         produtos: [
             {
                 id: 1020,
@@ -420,7 +420,7 @@ export const stores = [
                 price: 89.99,
                 category: "Churrascaria",
                 description: "Picanha bovina grelhada na brasa com farofa e vinagrete.",
-                photo: "https://picsum.photos/200/300?random=71",
+                photo: "https://loremflickr.com/200/300/food?lock=71",
                 storeId: 11
             },
             {
@@ -429,14 +429,14 @@ export const stores = [
                 price: 79.99,
                 category: "Churrascaria",
                 description: "Costela de porco assada no bafo com molho barbecue.",
-                photo: "https://picsum.photos/200/300?random=72",
+                photo: "https://loremflickr.com/200/300/food?lock=72",
                 storeId: 11
             }
         ]
     },
     {
         id: '12',
-        logo: 'https://picsum.photos/200/300?random=12',
+        logo: 'https://loremflickr.com/200/300/food?lock=12',
         name: 'Burguer Shop',
         star: 4.5,
         frete: 'R$ 3,00',
@@ -444,7 +444,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=89',
         produtos: [
             {
                 id: 1022,
@@ -452,7 +452,7 @@ export const stores = [
                 price: 19.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=73",
+                photo: "https://loremflickr.com/200/300/food?lock=73",
                 storeId: 12
             },
             {
@@ -461,14 +461,14 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=74",
+                photo: "https://loremflickr.com/200/300/food?lock=74",
                 storeId: 12
             }
         ]
     },
     {
         id: '13',
-        logo: 'https://picsum.photos/200/300?random=13',
+        logo: 'https://loremflickr.com/200/300/food?lock=13',
         name: 'Pizza & Cia',
         star: 4.6,
         frete: 'Gratis',
@@ -476,7 +476,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=88',
         produtos: [
             {
                 id: 1024,
@@ -484,7 +484,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=75",
+                photo: "https://loremflickr.com/200/300/food?lock=75",
                 storeId: 13
             },
             {
@@ -493,14 +493,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=76",
+                photo: "https://loremflickr.com/200/300/food?lock=76",
                 storeId: 13
             }
         ]
     },
     {
         id: '14',
-        logo: 'https://picsum.photos/200/300?random=14',
+        logo: 'https://loremflickr.com/200/300/food?lock=5145',
         name: 'Sushiyaki',
         star: 4.2,
         frete: 'R$ 8,00',
@@ -508,7 +508,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=87',
         produtos: [
             {
                 id: 1026,
@@ -516,7 +516,7 @@ export const stores = [
                 price: 24.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com legumes frescos e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=77",
+                photo: "https://loremflickr.com/200/300/food?lock=77",
                 storeId: 14
             },
             {
@@ -525,14 +525,14 @@ export const stores = [
                 price: 19.99,
                 category: "Japonesa",
                 description: "Sushi enrolado com kani, cream cheese e cebolinha.",
-                photo: "https://picsum.photos/200/300?random=78",
+                photo: "https://loremflickr.com/200/300/food?lock=78",
                 storeId: 14
             }
         ]
     },
     {
         id: '15',
-        logo: 'https://picsum.photos/200/300?random=15',
+        logo: 'https://loremflickr.com/200/300/food?lock=15',
         name: 'Cantina da Nonna',
         star: 4.8,
         frete: 'Gratis',
@@ -540,7 +540,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=86',
         produtos: [
             {
                 id: 1028,
@@ -548,7 +548,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=79",
+                photo: "https://loremflickr.com/200/300/food?lock=79",
                 storeId: 15
             },
             {
@@ -557,14 +557,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=80",
+                photo: "https://loremflickr.com/200/300/food?lock=80",
                 storeId: 15
             }
         ]
     },
     {
         id: '16',
-        logo: 'https://picsum.photos/200/300?random=16',
+        logo: 'https://loremflickr.com/200/300/food?lock=169',
         name: 'Burguer Master',
         star: 4.9,
         frete: 'R$ 4,50',
@@ -572,7 +572,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 10,00 disponível',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=85',
         produtos: [
             {
                 id: 1030,
@@ -580,7 +580,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de picanha com queijo cheddar, bacon e molho especial.",
-                photo: "https://picsum.photos/200/300?random=81",
+                photo: "https://loremflickr.com/200/300/food?lock=81",
                 storeId: 16
             },
             {
@@ -589,14 +589,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=82",
+                photo: "https://loremflickr.com/200/300/food?lock=82",
                 storeId: 16
             }
         ]
     },
     {
         id: '17',
-        logo: 'https://picsum.photos/200/300?random=17',
+        logo: 'https://loremflickr.com/200/300/food?lock=0',
         name: 'Pizza da Vila',
         star: 4.3,
         frete: 'Gratis',
@@ -604,7 +604,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=84',
         produtos: [
             {
                 id: 1032,
@@ -612,7 +612,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=83",
+                photo: "https://loremflickr.com/200/300/food?lock=83",
                 storeId: 17
             },
             {
@@ -621,14 +621,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=84",
+                photo: "https://loremflickr.com/200/300/food?lock=84",
                 storeId: 17
             }
         ]
     },
     {
         id: '18',
-        logo: 'https://picsum.photos/200/300?random=18',
+        logo: 'https://loremflickr.com/200/300/food?lock=18',
         name: 'Sushi Mania',
         star: 4.4,
         frete: 'R$ 5,00',
@@ -636,7 +636,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Japonesa',
         cupom: 'Desconto de 20%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=83',
         produtos: [
             {
                 id: 1034,
@@ -644,7 +644,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=85",
+                photo: "https://loremflickr.com/200/300/food?lock=85",
                 storeId: 18
             },
             {
@@ -653,14 +653,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=86",
+                photo: "https://loremflickr.com/200/300/food?lock=86",
                 storeId: 18
             }
         ]
     },
     {
         id: '19',
-        logo: 'https://picsum.photos/200/300?random=19',
+        logo: 'https://loremflickr.com/200/300/food?lock=145',
         name: 'Massas da Mamma',
         star: 4.6,
         frete: 'Gratis',
@@ -668,7 +668,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=82',
         produtos: [
             {
                 id: 1036,
@@ -676,7 +676,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=87",
+                photo: "https://loremflickr.com/200/300/food?lock=87",
                 storeId: 19
             },
             {
@@ -685,14 +685,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=88",
+                photo: "https://loremflickr.com/200/300/food?lock=88",
                 storeId: 19
             }
         ]
     },
     {
         id: '20',
-        logo: 'https://picsum.photos/200/300?random=20',
+        logo: 'https://loremflickr.com/200/300/food?lock=204',
         name: 'Hamburgueria Express',
         star: 4.2,
         frete: 'R$ 6,00',
@@ -700,7 +700,7 @@ export const stores = [
         tempoPreparo: '10-15 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=81',
         produtos: [
             {
                 id: 1038,
@@ -708,7 +708,7 @@ export const stores = [
                 price: 19.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=89",
+                photo: "https://loremflickr.com/200/300/food?lock=89",
                 storeId: 20
             },
             {
@@ -717,14 +717,14 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=90",
+                photo: "https://loremflickr.com/200/300/food?lock=90",
                 storeId: 20
             }
         ]
     },
     {
         id: '21',
-        logo: 'https://picsum.photos/200/300?random=21',
+        logo: 'https://loremflickr.com/200/300/food?lock=215',
         name: 'Pizzaria Margherita',
         star: 4.7,
         frete: 'Gratis',
@@ -732,7 +732,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=80',
         produtos: [
             {
                 id: 1040,
@@ -740,7 +740,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=91",
+                photo: "https://loremflickr.com/200/300/food?lock=91",
                 storeId: 21
             },
             {
@@ -749,14 +749,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=92",
+                photo: "https://loremflickr.com/200/300/food?lock=92",
                 storeId: 21
             }
         ]
     },
     {
         id: '22',
-        logo: 'https://picsum.photos/200/300?random=22',
+        logo: 'https://loremflickr.com/200/300/food?lock=22',
         name: 'Sushi Fusion',
         star: 4.5,
         frete: 'R$ 4,50',
@@ -764,7 +764,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Desconto de 15%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=79',
         produtos: [
             {
                 id: 1042,
@@ -772,7 +772,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=93",
+                photo: "https://loremflickr.com/200/300/food?lock=93",
                 storeId: 22
             },
             {
@@ -781,14 +781,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=94",
+                photo: "https://loremflickr.com/200/300/food?lock=94",
                 storeId: 22
             }
         ]
     },
     {
         id: '23',
-        logo: 'https://picsum.photos/200/300?random=23',
+        logo: 'https://loremflickr.com/200/300/food?lock=228',
         name: 'Pasta Bella',
         star: 4.8,
         frete: 'Gratis',
@@ -796,7 +796,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=78',
         produtos: [
             {
                 id: 1044,
@@ -804,7 +804,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=95",
+                photo: "https://loremflickr.com/200/300/food?lock=95",
                 storeId: 23
             },
             {
@@ -813,14 +813,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=96",
+                photo: "https://loremflickr.com/200/300/food?lock=96",
                 storeId: 23
             }
         ]
     },
     {
         id: '24',
-        logo: 'https://picsum.photos/200/300?random=24',
+        logo: 'https://loremflickr.com/200/300/food?lock=24',
         name: 'Lanche do Rei',
         star: 4.1,
         frete: 'R$ 5,00',
@@ -828,7 +828,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Lanches',
         cupom: 'Cupom de 5% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=77',
         produtos: [
             {
                 id: 1046,
@@ -836,7 +836,7 @@ export const stores = [
                 price: 14.99,
                 category: "Lanches",
                 description: "Pão com salsicha, molho de tomate, milho, ervilha e batata palha.",
-                photo: "https://picsum.photos/200/300?random=97",
+                photo: "https://loremflickr.com/200/300/food?lock=97",
                 storeId: 24
             },
             {
@@ -845,14 +845,14 @@ export const stores = [
                 price: 12.99,
                 category: "Lanches",
                 description: "Pão de forma com queijo e presunto, grelhado na chapa.",
-                photo: "https://picsum.photos/200/300?random=98",
+                photo: "https://loremflickr.com/200/300/food?lock=98",
                 storeId: 24
             }
         ]
     },
     {
         id: '25',
-        logo: 'https://picsum.photos/200/300?random=25',
+        logo: 'https://loremflickr.com/200/300/food?lock=275',
         name: 'Churrascaria Top',
         star: 4.6,
         frete: 'Gratis',
@@ -860,7 +860,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=77',
         produtos: [
             {
                 id: 1048,
@@ -868,7 +868,7 @@ export const stores = [
                 price: 89.99,
                 category: "Churrascaria",
                 description: "Picanha bovina grelhada na brasa com farofa e vinagrete.",
-                photo: "https://picsum.photos/200/300?random=99",
+                photo: "https://loremflickr.com/200/300/food?lock=99",
                 storeId: 25
             },
             {
@@ -877,14 +877,14 @@ export const stores = [
                 price: 79.99,
                 category: "Churrascaria",
                 description: "Costela de porco assada no bafo com molho barbecue.",
-                photo: "https://picsum.photos/200/300?random=100",
+                photo: "https://loremflickr.com/200/300/food?lock=100",
                 storeId: 25
             }
         ]
     },
     {
         id: '26',
-        logo: 'https://picsum.photos/200/300?random=26',
+        logo: 'https://loremflickr.com/200/300/food?lock=33 1',
         name: 'Hamburgueria do Zé',
         star: 4.3,
         frete: 'R$ 4,50',
@@ -892,7 +892,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=76',
         produtos: [
             {
                 id: 1050,
@@ -900,7 +900,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de picanha com queijo cheddar, bacon e molho especial.",
-                photo: "https://picsum.photos/200/300?random=101",
+                photo: "https://loremflickr.com/200/300/food?lock=101",
                 storeId: 26
             },
             {
@@ -909,14 +909,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=102",
+                photo: "https://loremflickr.com/200/300/food?lock=102",
                 storeId: 26
             }
         ]
     },
     {
         id: '27',
-        logo: 'https://picsum.photos/200/300?random=27',
+        logo: 'https://loremflickr.com/200/300/food?lock=27',
         name: 'Pizza no Ponto',
         star: 4.7,
         frete: 'Gratis',
@@ -924,7 +924,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=75',
         produtos: [
             {
                 id: 1052,
@@ -932,7 +932,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=103",
+                photo: "https://loremflickr.com/200/300/food?lock=103",
                 storeId: 27
             },
             {
@@ -941,14 +941,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=104",
+                photo: "https://loremflickr.com/200/300/food?lock=104",
                 storeId: 27
             }
         ]
     },
     {
         id: '28',
-        logo: 'https://picsum.photos/200/300?random=28',
+        logo: 'https://loremflickr.com/200/300/food?lock=28',
         name: 'Sushi Shop',
         star: 4.4,
         frete: 'R$ 6,00',
@@ -956,7 +956,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Japonesa',
         cupom: 'Desconto de 10%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=74',
         produtos: [
             {
                 id: 1054,
@@ -964,7 +964,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=105",
+                photo: "https://loremflickr.com/200/300/food?lock=105",
                 storeId: 28
             },
             {
@@ -973,14 +973,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=106",
+                photo: "https://loremflickr.com/200/300/food?lock=106",
                 storeId: 28
             }
         ]
     },
     {
         id: '29',
-        logo: 'https://picsum.photos/200/300?random=29',
+        logo: 'https://loremflickr.com/200/300/food?lock=275',
         name: 'Massas do Chef',
         star: 4.6,
         frete: 'Gratis',
@@ -988,7 +988,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=73',
         produtos: [
             {
                 id: 1056,
@@ -996,7 +996,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=107",
+                photo: "https://loremflickr.com/200/300/food?lock=107",
                 storeId: 29
             },
             {
@@ -1005,14 +1005,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=108",
+                photo: "https://loremflickr.com/200/300/food?lock=108",
                 storeId: 29
             }
         ]
     },
     {
         id: '30',
-        logo: 'https://picsum.photos/200/300?random=30',
+        logo: 'https://loremflickr.com/200/300/food?lock=73',
         name: 'Burguer Gourmet',
         star: 4.5,
         frete: 'R$ 5,50',
@@ -1020,7 +1020,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 20,00',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=72',
         produtos: [
             {
                 id: 1058,
@@ -1028,7 +1028,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de picanha com queijo cheddar, bacon e molho especial.",
-                photo: "https://picsum.photos/200/300?random=109",
+                photo: "https://loremflickr.com/200/300/food?lock=109",
                 storeId: 30
             },
             {
@@ -1037,14 +1037,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=110",
+                photo: "https://loremflickr.com/200/300/food?lock=110",
                 storeId: 30
             }
         ]
     },
     {
         id: '31',
-        logo: 'https://picsum.photos/200/300?random=31',
+        logo: 'https://loremflickr.com/200/300/food?lock=31',
         name: 'Pizzaria do Chef',
         star: 4.9,
         frete: 'Gratis',
@@ -1052,7 +1052,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=71',
         produtos: [
             {
                 id: 1060,
@@ -1060,7 +1060,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=111",
+                photo: "https://loremflickr.com/200/300/food?lock=111",
                 storeId: 31
             },
             {
@@ -1069,14 +1069,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=112",
+                photo: "https://loremflickr.com/200/300/food?lock=112",
                 storeId: 31
             }
         ]
     },
     {
         id: '32',
-        logo: 'https://picsum.photos/200/300?random=32',
+        logo: 'https://loremflickr.com/200/300/food?lock=89',
         name: 'Sushibar',
         star: 4.2,
         frete: 'R$ 6,00',
@@ -1084,7 +1084,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=70',
         produtos: [
             {
                 id: 1062,
@@ -1092,7 +1092,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=113",
+                photo: "https://loremflickr.com/200/300/food?lock=113",
                 storeId: 32
             },
             {
@@ -1101,14 +1101,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=114",
+                photo: "https://loremflickr.com/200/300/food?lock=114",
                 storeId: 32
             }
         ]
     },
     {
         id: '33',
-        logo: 'https://picsum.photos/200/300?random=33',
+        logo: 'https://loremflickr.com/200/300/food?lock=33',
         name: 'Massas da Vovó',
         star: 4.4,
         frete: 'Gratis',
@@ -1116,7 +1116,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=69',
         produtos: [
             {
                 id: 1064,
@@ -1124,7 +1124,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=115",
+                photo: "https://loremflickr.com/200/300/food?lock=115",
                 storeId: 33
             },
             {
@@ -1133,14 +1133,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=116",
+                photo: "https://loremflickr.com/200/300/food?lock=116",
                 storeId: 33
             }
         ]
     },
     {
         id: '34',
-        logo: 'https://picsum.photos/200/300?random=34',
+        logo: 'https://loremflickr.com/200/300/food?lock=98',
         name: 'Lanches do Zé',
         star: 4.3,
         frete: 'R$ 5,00',
@@ -1148,7 +1148,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Lanches',
         cupom: 'Desconto de 15%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=68',
         produtos: [
             {
                 id: 1066,
@@ -1156,7 +1156,7 @@ export const stores = [
                 price: 14.99,
                 category: "Lanches",
                 description: "Pão com salsicha, molho de tomate, milho, ervilha e batata palha.",
-                photo: "https://picsum.photos/200/300?random=117",
+                photo: "https://loremflickr.com/200/300/food?lock=117",
                 storeId: 34
             },
             {
@@ -1165,14 +1165,14 @@ export const stores = [
                 price: 12.99,
                 category: "Lanches",
                 description: "Pão de forma com queijo e presunto, grelhado na chapa.",
-                photo: "https://picsum.photos/200/300?random=118",
+                photo: "https://loremflickr.com/200/300/food?lock=118",
                 storeId: 34
             }
         ]
     },
     {
         id: '35',
-        logo: 'https://picsum.photos/200/300?random=35',
+        logo: 'https://loremflickr.com/200/300/food?lock=35',
         name: 'Churrasco do Rei',
         star: 4.7,
         frete: 'Gratis',
@@ -1180,7 +1180,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=67',
         produtos: [
             {
                 id: 1068,
@@ -1188,7 +1188,7 @@ export const stores = [
                 price: 89.99,
                 category: "Churrascaria",
                 description: "Picanha bovina grelhada na brasa com farofa e vinagrete.",
-                photo: "https://picsum.photos/200/300?random=119",
+                photo: "https://loremflickr.com/200/300/food?lock=119",
                 storeId: 35
             },
             {
@@ -1197,14 +1197,14 @@ export const stores = [
                 price: 79.99,
                 category: "Churrascaria",
                 description: "Costela de porco assada no bafo com molho barbecue.",
-                photo: "https://picsum.photos/200/300?random=120",
+                photo: "https://loremflickr.com/200/300/food?lock=120",
                 storeId: 35
             }
         ]
     },
     {
         id: '36',
-        logo: 'https://picsum.photos/200/300?random=36',
+        logo: 'https://loremflickr.com/200/300/food?lock=36',
         name: 'Hamburgueria do João',
         star: 4.8,
         frete: 'R$ 4,00',
@@ -1212,7 +1212,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de 20% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=66',
         produtos: [
             {
                 id: 1070,
@@ -1220,7 +1220,7 @@ export const stores = [
                 price: 19.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=121",
+                photo: "https://loremflickr.com/200/300/food?lock=121",
                 storeId: 36
             },
             {
@@ -1229,14 +1229,14 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=122",
+                photo: "https://loremflickr.com/200/300/food?lock=122",
                 storeId: 36
             }
         ]
     },
     {
         id: '37',
-        logo: 'https://picsum.photos/200/300?random=37',
+        logo: 'https://loremflickr.com/200/300/food?lock=37',
         name: 'Pizza do Bairro',
         star: 4.5,
         frete: 'Gratis',
@@ -1244,7 +1244,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=65',
         produtos: [
             {
                 id: 1072,
@@ -1252,7 +1252,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=123",
+                photo: "https://loremflickr.com/200/300/food?lock=123",
                 storeId: 37
             },
             {
@@ -1261,14 +1261,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=124",
+                photo: "https://loremflickr.com/200/300/food?lock=124",
                 storeId: 37
             }
         ]
     },
     {
         id: '38',
-        logo: 'https://picsum.photos/200/300?random=38',
+        logo: 'https://loremflickr.com/200/300/food?lock=38',
         name: 'Sushi Mania',
         star: 4.2,
         frete: 'R$ 6,50',
@@ -1276,7 +1276,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Desconto de 10%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=64',
         produtos: [
             {
                 id: 1074,
@@ -1284,7 +1284,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=125",
+                photo: "https://loremflickr.com/200/300/food?lock=125",
                 storeId: 38
             },
             {
@@ -1293,14 +1293,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=126",
+                photo: "https://loremflickr.com/200/300/food?lock=126",
                 storeId: 38
             }
         ]
     },
     {
         id: '39',
-        logo: 'https://picsum.photos/200/300?random=39',
+        logo: 'https://loremflickr.com/200/300/food?lock=39',
         name: 'Pasta & Pizzas',
         star: 4.7,
         frete: 'Gratis',
@@ -1308,7 +1308,7 @@ export const stores = [
         tempoPreparo: '30-40 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=63',
         produtos: [
             {
                 id: 1076,
@@ -1316,7 +1316,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=127",
+                photo: "https://loremflickr.com/200/300/food?lock=127",
                 storeId: 39
             },
             {
@@ -1325,14 +1325,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=128",
+                photo: "https://loremflickr.com/200/300/food?lock=128",
                 storeId: 39
             }
         ]
     },
     {
         id: '40',
-        logo: 'https://picsum.photos/200/300?random=40',
+        logo: 'https://loremflickr.com/200/300/food?lock=40',
         name: 'Lanchonete do Chef',
         star: 4.6,
         frete: 'R$ 4,50',
@@ -1340,7 +1340,7 @@ export const stores = [
         tempoPreparo: '15-25 min',
         category: 'Lanches',
         cupom: 'Cupom de 15% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=62',
         produtos: [
             {
                 id: 1078,
@@ -1348,7 +1348,7 @@ export const stores = [
                 price: 14.99,
                 category: "Lanches",
                 description: "Pão com salsicha, molho de tomate, milho, ervilha e batata palha.",
-                photo: "https://picsum.photos/200/300?random=129",
+                photo: "https://loremflickr.com/200/300/food?lock=129",
                 storeId: 40
             },
             {
@@ -1357,14 +1357,14 @@ export const stores = [
                 price: 12.99,
                 category: "Lanches",
                 description: "Pão de forma com queijo e presunto, grelhado na chapa.",
-                photo: "https://picsum.photos/200/300?random=130",
+                photo: "https://loremflickr.com/200/300/food?lock=130",
                 storeId: 40
             }
         ]
     },
     {
         id: '41',
-        logo: 'https://picsum.photos/200/300?random=41',
+        logo: 'https://loremflickr.com/200/300/food?lock=41',
         name: 'Churrasco do Zé',
         star: 4.4,
         frete: 'Gratis',
@@ -1372,7 +1372,7 @@ export const stores = [
         tempoPreparo: '50-60 min',
         category: 'Churrascaria',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=61',
         produtos: [
             {
                 id: 1080,
@@ -1380,7 +1380,7 @@ export const stores = [
                 price: 89.99,
                 category: "Churrascaria",
                 description: "Picanha bovina grelhada na brasa com farofa e vinagrete.",
-                photo: "https://picsum.photos/200/300?random=131",
+                photo: "https://loremflickr.com/200/300/food?lock=131",
                 storeId: 41
             },
             {
@@ -1389,14 +1389,14 @@ export const stores = [
                 price: 79.99,
                 category: "Churrascaria",
                 description: "Costela de porco assada no bafo com molho barbecue.",
-                photo: "https://picsum.photos/200/300?random=132",
+                photo: "https://loremflickr.com/200/300/food?lock=132",
                 storeId: 41
             }
         ]
     },
     {
         id: '42',
-        logo: 'https://picsum.photos/200/300?random=42',
+        logo: 'https://loremflickr.com/200/300/food?lock=42',
         name: 'Burguer da Vila',
         star: 4.3,
         frete: 'R$ 5,50',
@@ -1404,7 +1404,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Desconto de 5%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=60',
         produtos: [
             {
                 id: 1082,
@@ -1412,7 +1412,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de picanha com queijo cheddar, bacon e molho especial.",
-                photo: "https://picsum.photos/200/300?random=133",
+                photo: "https://loremflickr.com/200/300/food?lock=133",
                 storeId: 42
             },
             {
@@ -1421,14 +1421,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=134",
+                photo: "https://loremflickr.com/200/300/food?lock=134",
                 storeId: 42
             }
         ]
     },
     {
         id: '43',
-        logo: 'https://picsum.photos/200/300?random=43',
+        logo: 'https://loremflickr.com/200/300/food?lock=379',
         name: 'Pizza da Praça',
         star: 4.8,
         frete: 'Gratis',
@@ -1436,7 +1436,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=59',
         produtos: [
             {
                 id: 1084,
@@ -1444,7 +1444,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=135",
+                photo: "https://loremflickr.com/200/300/food?lock=135",
                 storeId: 43
             },
             {
@@ -1453,14 +1453,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=136",
+                photo: "https://loremflickr.com/200/300/food?lock=136",
                 storeId: 43
             }
         ]
     },
     {
         id: '44',
-        logo: 'https://picsum.photos/200/300?random=44',
+        logo: 'https://loremflickr.com/200/300/food?lock=44',
         name: 'Sushi Grill',
         star: 4.5,
         frete: 'R$ 6,00',
@@ -1468,7 +1468,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Japonesa',
         cupom: 'Cupom de 10% OFF',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=58',
         produtos: [
             {
                 id: 1086,
@@ -1476,7 +1476,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=137",
+                photo: "https://loremflickr.com/200/300/food?lock=137",
                 storeId: 44
             },
             {
@@ -1485,14 +1485,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=138",
+                photo: "https://loremflickr.com/200/300/food?lock=138",
                 storeId: 44
             }
         ]
     },
     {
         id: '45',
-        logo: 'https://picsum.photos/200/300?random=45',
+        logo: 'https://loremflickr.com/200/300/food?lock=45',
         name: 'Massas do Chef',
         star: 4.6,
         frete: 'Gratis',
@@ -1500,7 +1500,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Massas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=57',
         produtos: [
             {
                 id: 1088,
@@ -1508,7 +1508,7 @@ export const stores = [
                 price: 49.99,
                 category: "Massas",
                 description: "Massa italiana com molho de queijo, ovos, pancetta e pimenta do reino.",
-                photo: "https://picsum.photos/200/300?random=139",
+                photo: "https://loremflickr.com/200/300/food?lock=139",
                 storeId: 45
             },
             {
@@ -1517,14 +1517,14 @@ export const stores = [
                 price: 45.99,
                 category: "Massas",
                 description: "Massa fresca recheada com carne de frango, molho de tomate e manjericão.",
-                photo: "https://picsum.photos/200/300?random=140",
+                photo: "https://loremflickr.com/200/300/food?lock=140",
                 storeId: 45
             }
         ]
     },
     {
         id: '46',
-        logo: 'https://picsum.photos/200/300?random=46',
+        logo: 'https://loremflickr.com/200/300/food?lock=46',
         name: 'Hamburgueria do Zé',
         star: 4.1,
         frete: 'R$ 5,00',
@@ -1532,7 +1532,7 @@ export const stores = [
         tempoPreparo: '25-35 min',
         category: 'Hambúrgueres',
         cupom: 'Desconto de 10%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=56',
         produtos: [
             {
                 id: 1090,
@@ -1540,7 +1540,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de picanha com queijo cheddar, bacon e molho especial.",
-                photo: "https://picsum.photos/200/300?random=141",
+                photo: "https://loremflickr.com/200/300/food?lock=141",
                 storeId: 46
             },
             {
@@ -1549,14 +1549,14 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://picsum.photos/200/300?random=142",
+                photo: "https://loremflickr.com/200/300/food?lock=142",
                 storeId: 46
             }
         ]
     },
     {
         id: '47',
-        logo: 'https://picsum.photos/200/300?random=47',
+        logo: 'https://loremflickr.com/200/300/food?lock=47',
         name: 'Pizza Fina',
         star: 4.2,
         frete: 'Gratis',
@@ -1564,7 +1564,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=55',
         produtos: [
             {
                 id: 1056,
@@ -1572,7 +1572,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=107",
+                photo: "https://loremflickr.com/200/300/food?lock=107",
                 storeId: 47
             },
             {
@@ -1581,14 +1581,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=108",
+                photo: "https://loremflickr.com/200/300/food?lock=108",
                 storeId: 47
             }
         ]
     },
     {
         id: '48',
-        logo: 'https://picsum.photos/200/300?random=48',
+        logo: 'https://loremflickr.com/200/300/food?lock=480',
         name: 'Sushi House',
         star: 4.4,
         frete: 'R$ 6,50',
@@ -1596,7 +1596,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Japonesa',
         cupom: 'Cupom de 15%',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=54',
         produtos: [
             {
                 id: 1056,
@@ -1604,7 +1604,7 @@ export const stores = [
                 price: 37.99,
                 category: "Japonesa",
                 description: "Sashimi de salmão fresco cortado em fatias finas.",
-                photo: "https://picsum.photos/200/300?random=107",
+                photo: "https://loremflickr.com/200/300/food?lock=107",
                 storeId: 48
             },
             {
@@ -1613,14 +1613,14 @@ export const stores = [
                 price: 29.99,
                 category: "Japonesa",
                 description: "Macarrão oriental com frango, legumes e molho shoyu.",
-                photo: "https://picsum.photos/200/300?random=108",
+                photo: "https://loremflickr.com/200/300/food?lock=108",
                 storeId: 48
             }
         ]
     },
     {
         id: '49',
-        logo: 'https://picsum.photos/200/300?random=49',
+        logo: 'https://loremflickr.com/200/300/food?lock=49',
         name: 'Pizza do João',
         star: 4.3,
         frete: 'R$ 5,00',
@@ -1628,7 +1628,7 @@ export const stores = [
         tempoPreparo: '40-50 min',
         category: 'Pizzas',
         cupom: '',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=53',
         produtos: [
             {
                 id: 1056,
@@ -1636,7 +1636,7 @@ export const stores = [
                 price: 39.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e orégano.",
-                photo: "https://picsum.photos/200/300?random=107",
+                photo: "https://loremflickr.com/200/300/food?lock=107",
                 storeId: 49
             },
             {
@@ -1645,14 +1645,14 @@ export const stores = [
                 price: 42.99,
                 category: "Pizzas",
                 description: "Pizza com molho de tomate, queijo mozzarella e calabresa fatiada.",
-                photo: "https://picsum.photos/200/300?random=108",
+                photo: "https://loremflickr.com/200/300/food?lock=108",
                 storeId: 49
             }
         ]
     },
     {
         id: '50',
-        logo: 'https://picsum.photos/200/300?random=50',
+        logo: 'https://loremflickr.com/200/300/food?lock=50',
         name: 'Burgueria do Zé',
         star: 4.7,
         frete: 'Gratis',
@@ -1660,7 +1660,7 @@ export const stores = [
         tempoPreparo: '20-30 min',
         category: 'Hambúrgueres',
         cupom: 'Cupom de R$ 10,00 disponível',
-        lojaSuper: 'https://picsum.photos/200/300?random=1',
+        lojaSuper: 'https://loremflickr.com/200/300/food?lock=52',
         produtos: [
             {
                 id: 1056,
@@ -1668,7 +1668,7 @@ export const stores = [
                 price: 19.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface e tomate.",
-                photo: "https://picsum.photos/200/300?random=107",
+                photo: "https://loremflickr.com/200/300/food?lock=107",
                 storeId: 50
             },
             {
@@ -1677,7 +1677,7 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne bovina, queijo, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=108",
+                photo: "https://loremflickr.com/200/300/food?lock=108",
                 storeId: 50
             },
             {
@@ -1686,7 +1686,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne bovina com queijo cheddar, cebola caramelizada e maionese especial.",
-                photo: "https://picsum.photos/200/300?random=109",
+                photo: "https://loremflickr.com/200/300/food?lock=109",
                 storeId: 50
             },
             {
@@ -1695,7 +1695,7 @@ export const stores = [
                 price: 22.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de frango, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=110",
+                photo: "https://loremflickr.com/200/300/food?lock=110",
                 storeId: 50
             },
             {
@@ -1704,7 +1704,7 @@ export const stores = [
                 price: 35.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer duplo com queijo cheddar, bacon crocante, alface e molho barbecue.",
-                photo: "https://picsum.photos/200/300?random=111",
+                photo: "https://loremflickr.com/200/300/food?lock=111",
                 storeId: 50
             },
             {
@@ -1713,7 +1713,7 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne bovina com bacon crocante, queijo cheddar e molho especial.",
-                photo: "https://picsum.photos/200/300?random=112",
+                photo: "https://loremflickr.com/200/300/food?lock=112",
                 storeId: 50
             },
             {
@@ -1722,7 +1722,7 @@ export const stores = [
                 price: 29.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer com carne bovina, frango, queijo, bacon, ovo, alface, tomate e maionese.",
-                photo: "https://picsum.photos/200/300?random=113",
+                photo: "https://loremflickr.com/200/300/food?lock=113",
                 storeId: 50
             },
             {
@@ -1731,7 +1731,7 @@ export const stores = [
                 price: 34.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de picanha, queijo cheddar, cebola roxa e molho de mostarda e mel.",
-                photo: "https://picsum.photos/200/300?random=114",
+                photo: "https://loremflickr.com/200/300/food?lock=114",
                 storeId: 50
             },
             {
@@ -1740,7 +1740,7 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de grão de bico com alface, tomate e molho vegano.",
-                photo: "https://picsum.photos/200/300?random=115",
+                photo: "https://loremflickr.com/200/300/food?lock=115",
                 storeId: 50
             },
             {
@@ -1749,7 +1749,7 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de peixe empanado com molho tártaro, alface e cebola roxa.",
-                photo: "https://picsum.photos/200/300?random=116",
+                photo: "https://loremflickr.com/200/300/food?lock=116",
                 storeId: 50
             },
             {
@@ -1758,7 +1758,7 @@ export const stores = [
                 price: 21.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne bovina com queijo prato, alface e ketchup.",
-                photo: "https://picsum.photos/200/300?random=117",
+                photo: "https://loremflickr.com/200/300/food?lock=117",
                 storeId: 50
             },
             {
@@ -1767,7 +1767,7 @@ export const stores = [
                 price: 28.99,
                 category: "Hambúrgueres",
                 description: "Pão com hambúrguer de carne suína, molho de mostarda e picles.",
-                photo: "https://picsum.photos/200/300?random=118",
+                photo: "https://loremflickr.com/200/300/food?lock=118",
                 storeId: 50
             },
             {
@@ -1776,7 +1776,7 @@ export const stores = [
                 price: 32.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne bovina com queijo cheddar e bacon crocante.",
-                photo: "https://picsum.photos/200/300?random=119",
+                photo: "https://loremflickr.com/200/300/food?lock=119",
                 storeId: 50
             }
         ]
