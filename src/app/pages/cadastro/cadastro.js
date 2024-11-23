@@ -4,6 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import * as Yup from 'yup';
 import { styles } from './style';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { adicionarUsuario } from '../../api/loginApi';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('Nome é obrigatório'),
@@ -18,10 +19,24 @@ const SignupScreen = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    Alert.alert('Cadastro realizado com sucesso!', JSON.stringify(data, null, 2));
-    reset();
+  const onSubmit = async (data) => {
+    try {
+      const novoUsuario = {
+        name: data.name,
+        email: data.email,
+        password: data.password,
+      };  
+      const response = await adicionarUsuario(novoUsuario);
+      Alert.alert("Usuário cadastrado com sucesso!", `ID: ${response.id}`);
+    } catch (error) {
+      console.error("Erro ao criar o usuário:", error.response?.data || error.message);
+      Alert.alert(
+        "Erro ao cadastrar usuário.",
+        error.response?.data || "Verifique os dados e tente novamente."
+      );
+    }
   };
+  
 
   return (
     <View style={styles.container}>
