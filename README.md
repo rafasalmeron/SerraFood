@@ -83,7 +83,7 @@ Isso abrirá o Expo Dev Tools no seu navegador, onde você pode rodar o aplicati
     </td>
     <td align="center">
         <img src="https://github.com/Felipe-Goncalves-Lima.png" width="125px;" alt="Felipe Gonçalves Lima"/><br />
-         <p><a href="https://github.com/Felipe-Goncalves-Lima" target="_blank">Felipe Gonçalves Lima</a></p>
+         <p><a href="https://github.com/Felipe-Goncalves-Lima" target="_blank">Felipe Gonçalves</a></p>
       </a>
     </td>
     <td align="center">
