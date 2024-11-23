@@ -127,15 +127,33 @@ export const styles = StyleSheet.create({
     color: '#666',
     marginTop: 5,
   },
+  priceButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  },
   precoProduto: {
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 10,
     color: '#e91e63',
+    marginRight: 10,
   },
   imagemProduto: {
     width: 100,
     height: 100,
     borderRadius: 10,
+  },
+  addButton: {
+    backgroundColor: 'red',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  addButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });

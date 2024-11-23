@@ -3,6 +3,7 @@ import {SafeAreaView, StyleSheet} from "react-native";
 import FooterTab from "./components/footerTab/FooterTab";
 import LoadingScreen from "./components/loadingScreen/LoadingScreen";
 import { CartProvider } from './hooks/CartContext';
+import 'react-native-get-random-values';
 
 const  App = () => {
     const [loading, setLoading] = useState(true);
