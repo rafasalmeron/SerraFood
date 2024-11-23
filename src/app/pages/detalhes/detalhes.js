@@ -1,19 +1,21 @@
+import React, { useState, useContext } from 'react';
 import {
-  Image, 
-  Text, 
-  View, 
-  FlatList, 
-  TouchableOpacity 
+  Image,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
 } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
-import { useState } from 'react';
-import { useRoute, useNavigation } from '@react-navigation/native'; 
+import { useRoute, useNavigation } from '@react-navigation/native';
 import { styles } from "./style";
+import { CartContext } from '../../hooks/CartContext';
 
 const DetalhesLoja = () => {
   const route = useRoute();
   const navigation = useNavigation();
   const { loja } = route.params;
+  const { addItem } = useContext(CartContext);
 
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -30,7 +32,7 @@ const DetalhesLoja = () => {
       data={produtosFiltrados}
       ListHeaderComponent={() => (
         <View>
-s          <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
+          <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
             <Icon name="arrow-back" size={30} color="#fff" />
           </TouchableOpacity>
 
@@ -68,19 +70,24 @@ s          <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigatio
         </View>
       )}
       renderItem={({ item }) => (
-        <TouchableOpacity onPress={() => lidarComProduto(item.id)}>
-          <View style={styles.cardProduto}>
-            <View style={styles.infoProduto}>
-              <Text style={styles.nomeProduto}>{item.name}</Text>
-              <Text style={styles.descricaoProduto}>{item.description}</Text>
+        <View style={styles.cardProduto}>
+          <View style={styles.infoProduto}>
+            <Text style={styles.nomeProduto}>{item.name}</Text>
+            <Text style={styles.descricaoProduto}>{item.description}</Text>
+            <View style={styles.priceButtonContainer}>
               <Text style={styles.precoProduto}>R${item.price}</Text>
+              <TouchableOpacity
+                style={styles.addButton}
+                onPress={() => addItem(item)}>
+                <Text style={styles.addButtonText}>Adicionar ao Carrinho</Text>
+              </TouchableOpacity>
             </View>
-            <Image
-              source={{ uri: item.photo }}
-              style={styles.imagemProduto}
-            />
           </View>
-        </TouchableOpacity>
+          <Image
+            source={{ uri: item.photo }}
+            style={styles.imagemProduto}
+          />
+        </View>
       )}
       keyExtractor={(item) => item.id.toString()}
     />

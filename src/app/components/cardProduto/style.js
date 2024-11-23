@@ -34,4 +34,17 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         color: '#333',
     },
+    addButton: {
+        marginTop: 8,
+        backgroundColor: 'red',
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        borderRadius: 4,
+        alignItems: 'center',
+    },
+    addButtonText: {
+        color: '#fff',
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
 });
