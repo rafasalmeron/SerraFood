@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { styles } from './style';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { adicionarUsuario } from '../../api/loginApi';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('Nome é obrigatório'),
@@ -19,14 +20,26 @@ const SignupScreen = () => {
     resolver: yupResolver(schema),
   });
 
+  
   const onSubmit = async (data) => {
     try {
       const novoUsuario = {
         name: data.name,
         email: data.email,
         password: data.password,
-      };  
+      };
+  
       const response = await adicionarUsuario(novoUsuario);
+  
+      await AsyncStorage.setItem(
+        '@usuario',
+        JSON.stringify({
+          id: response.id,
+          name: novoUsuario.name,
+          email: novoUsuario.email,
+        })
+      );
+  
       Alert.alert("Usuário cadastrado com sucesso!", `ID: ${response.id}`);
     } catch (error) {
       console.error("Erro ao criar o usuário:", error.response?.data || error.message);
@@ -36,6 +49,7 @@ const SignupScreen = () => {
       );
     }
   };
+  
   
 
   return (
