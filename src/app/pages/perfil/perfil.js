@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import {View, ImageBackground, TouchableOpacity, Text, Button} from 'react-native';
 import { styles } from './style';
 import fundo from '../../../../assets/fundo.png';
 
