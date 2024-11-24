@@ -6,14 +6,17 @@ import {stores} from "../../api/lojas";
 import CardLoja from "../../components/cardLoja/CardLoja";
 import logoFood from "../../../../assets/LogoSerraFood3.png";
 import CardProduto from "../../components/cardProduto/CardProduto";
+import Carousel from "../../components/carrossel/Carrossel";
+import CheapProductsList from "../../components/produtosBaratos/ProdutosBaratos";
+import StoreList from "../../components/storeList/StoreList";
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState("Início");
 
     const imagens = [
-        { id: 1, url: 'https://picsum.photos/350/150?random=1', },
-        { id: 2, url: 'https://picsum.photos/350/150?random=2', },
-        { id: 3, url: 'https://picsum.photos/350/150?random=3', },
+        {id: 1, url: 'https://picsum.photos/350/150?random=1',},
+        {id: 2, url: 'https://picsum.photos/350/150?random=2',},
+        {id: 3, url: 'https://picsum.photos/350/150?random=3',},
     ];
 
     const filteredStores =
@@ -26,10 +29,11 @@ const Home = () => {
         .filter((produto) => produto.price < 30);
 
     const lojasSuper = stores.filter((loja) => loja.super !== '');
-    const freteGratis = stores.filter((loja) => loja.frete === 'gratis');
+    const freteGratis = stores.filter((loja) => loja.frete === 'Gratis');
 
     return (
         <ScrollView style={styles.mainContainer}>
+
             <View style={styles.header}>
                 <Image source={logoFood} style={styles.logo}/>
                 <Text style={styles.headerText}>Serra Food</Text>
@@ -39,73 +43,46 @@ const Home = () => {
                 <Nav onCategorySelect={(category) => setSelectedCategory(category)}/>
             </View>
 
-            <FlatList style={styles.flat}
-                      data={imagens}
-                      keyExtractor={(item) => item.id.toString()}
-                      renderItem={({item}) => (
-                          <Image source={{uri: item.url}} style={styles.image} resizeMode="contain"/>
-                      )}
-                      horizontal
-                      ItemSeparatorComponent={
-                          () => <View style={styles.separator}/>
-                      }
-            />
+            {selectedCategory === "Início" ? (
+                <>
+                    <Carousel images={imagens} styles={styles} />
 
-            <View>
-                <Text style={styles.lojaText}>Bom e Barato</Text>
-                <Text style={styles.subText}>Opções de até R$30</Text>
-            </View>
+                    <CheapProductsList products={produtosBaratos} styles={styles} />
 
-            <FlatList
-                data={produtosBaratos}
-                renderItem={
-                    ({item}) => (
-                        <CardProduto product={item}/>
-                    )}
-                horizontal
-            />
+                    <StoreList
+                        stores={lojasSuper}
+                        title="Lojas Super"
+                        styles={styles}
+                        horizontal={true}
+                    />
 
-            <Text style={styles.lojaText}>Lojas Super</Text>
+                    <StoreList
+                        stores={freteGratis}
+                        title="Loja com Frete Grátis"
+                        styles={styles}
+                        horizontal={true}
+                    />
 
-            <FlatList
-                data={lojasSuper}
-                renderItem={
-                    ({item}) => (
-                       <View  style={styles.content2}>
-                           <Image
-                               source={{uri: item.logo}}
-                               style={styles.logoSuper}
-                           />
-                            <Text style={styles.lojaSuperText}>{item.name}</Text>
-                       </View>
-                    )
-                }
-                horizontal
-            />
+                    <StoreList
+                        stores={filteredStores}
+                        title="Lojas"
+                        styles={styles}
+                        renderCustomItem={(item) => <CardLoja item={item} />}
+                        horizontal={false}
+                    />
 
-            <FlatList
-                data={freteGratis}
-                renderItem={
-                    ({item}) => (
-                        <CardLoja item={item}/>
-                    )
-                }
-                horizontal
-            />
-
-            <Text style={styles.lojaText}>Lojas</Text>
-
-            <FlatList
-                data={filteredStores}
-                keyExtractor={(item) => item.id.toString()}
-                renderItem={({item}) => <CardLoja item={item}/>}
-                ListEmptyComponent={
-                    <Text style={styles.emptyText}>Nenhuma loja encontrada.</Text>
-                }
-                contentContainerStyle={styles.storeList}
-            />
+                </>
+            ) : (
+                <StoreList
+                    stores={filteredStores}
+                    title="Lojas"
+                    styles={styles}
+                    renderCustomItem={(item) => <CardLoja item={item} />}
+                    horizontal={false}
+                />
+            )}
         </ScrollView>
-    );
+);
 };
 
 export default Home;

@@ -6,7 +6,7 @@ export const stores = [
         logo: 'https://picsum.photos/200/300?random=1',
         name: 'Hambúrgueria Top',
         star: 4.5,
-        frete: 'Gratis',
+        frete: 'R$ 5,00',
         distancia: '1,5 km',
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
