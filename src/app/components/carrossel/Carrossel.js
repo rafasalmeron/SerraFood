@@ -7,7 +7,7 @@ const Carousel = ({ images, styles }) => {
             data={images}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
-                <Image source={{ uri: item.url }} style={styles.image} resizeMode="contain" />
+                <Image source={ item.url } style={styles.image} resizeMode="contain" />
             )}
             horizontal
             ItemSeparatorComponent={() => <View style={styles.separator} />}

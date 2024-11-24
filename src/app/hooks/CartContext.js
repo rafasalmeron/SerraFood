@@ -7,6 +7,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cupom, setCupom] = useState(null);
   const [desconto, setDesconto] = useState(0);
+  const [pedidos, setPedidos] = useState([]);
 
   const addItem = (item) => {
     const newItem = { ...item, cartItemId: uuidv4() };
@@ -27,6 +28,17 @@ export const CartProvider = ({ children }) => {
   };
 
   const finalizarCompra = (metodoPagamento) => {
+    setPedidos((prev) => [
+      ...prev,
+      {
+        id: uuidv4(),
+        items: cartItems,
+        cupom,
+        desconto,
+        total: cartItems.reduce((acc, item) => acc + item.price, 0) - desconto,
+        metodoPagamento,
+      },
+    ]);
     setCartItems([]);
     setCupom(null);
     setDesconto(0);
@@ -36,7 +48,7 @@ export const CartProvider = ({ children }) => {
   const total = totalSemDesconto - desconto;
 
   return (
-    <CartContext.Provider value={{ cartItems, addItem, removeItem, finalizarCompra, aplicarCupom, total, desconto, cupom }}>
+    <CartContext.Provider value={{ pedidos, cartItems, addItem, removeItem, finalizarCompra, aplicarCupom, total, desconto, cupom }}>
       {children}
     </CartContext.Provider>
   );

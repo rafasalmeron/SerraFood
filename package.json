@@ -11,6 +11,7 @@
   "dependencies": {
     "@expo/metro-runtime": "~4.0.0",
     "@hookform/resolvers": "^3.9.1",
+    "@mui/material": "^6.1.8",
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-picker/picker": "^2.9.0",
     "@react-navigation/material-bottom-tabs": "^6.2.29",
@@ -24,6 +25,7 @@
     "expo-router": "^4.0.9",
     "expo-status-bar": "~2.0.0",
     "lottie-react-native": "^7.1.0",
+    "moment-timezone": "^0.5.46",
     "nativewind": "^4.1.23",
     "react": "18.3.1",
     "react-dom": "18.3.1",

@@ -1,0 +1,32 @@
+[
+  [
+    {
+      "category": "Hambúrgueres",
+      "cupom": "",
+      "distancia": "1,5 km",
+      "frete": "R$ 5,00",
+      "id": "1",
+      "logo": "https://s2.glbimg.com/IaEnP49buSdSUDftlMxVrq3-ZDo=/940x523/e.glbimg.com/og/ed/f/original/2019/04/26/loucosporti1.jpg",
+      "lojaSuper": 4,
+      "name": "HambúrgueriaTop",
+      "produtos": [Array],
+      "star": 4.5,
+      "tempoPreparo": "30-40 min"
+    }
+  ],
+  [
+    {
+      "category": "Hambúrgueres",
+      "cupom": "",
+      "distancia": "1,5 km",
+      "frete": "R$ 5,00",
+      "id": "1",
+      "logo": "https://s2.glbimg.com/IaEnP49buSdSUDftlMxVrq3-ZDo=/940x523/e.glbimg.com/og/ed/f/original/2019/04/26/loucosporti1.jpg",
+      "lojaSuper": 4,
+      "name": "Hambúrgueria Top",
+      "produtos": [Array],
+      "star": 4.5,
+      "tempoPreparo": "30-40 min"
+    }
+  ]
+]

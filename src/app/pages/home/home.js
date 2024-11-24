@@ -5,18 +5,21 @@ import {styles} from "./style";
 import {stores} from "../../api/lojas";
 import CardLoja from "../../components/cardLoja/CardLoja";
 import logoFood from "../../../../assets/LogoSerraFood3.png";
-import CardProduto from "../../components/cardProduto/CardProduto";
 import Carousel from "../../components/carrossel/Carrossel";
 import CheapProductsList from "../../components/produtosBaratos/ProdutosBaratos";
 import StoreList from "../../components/storeList/StoreList";
+import {LogBox} from "react-native";
+import Banner1 from '../../../../assets/banner1.png';
+import Banner2 from '../../../../assets/banner2.png';
+
+LogBox.ignoreAllLogs();
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState("Início");
 
     const imagens = [
-        {id: 1, url: 'https://picsum.photos/350/150?random=1',},
-        {id: 2, url: 'https://picsum.photos/350/150?random=2',},
-        {id: 3, url: 'https://picsum.photos/350/150?random=3',},
+        {id: 1, url: Banner1,},
+        {id: 2, url: Banner2,},
     ];
 
     const filteredStores =
@@ -28,7 +31,8 @@ const Home = () => {
         .flatMap((loja) => loja.produtos)
         .filter((produto) => produto.price < 30);
 
-    const lojasSuper = stores.filter((loja) => loja.super !== '');
+    const lojasSuper = stores.filter((loja) => loja.lojaSuper !== '');
+
     const freteGratis = stores.filter((loja) => loja.frete === 'Gratis');
 
     return (
