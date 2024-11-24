@@ -116,6 +116,7 @@ export const styles = StyleSheet.create({
   },
   infoProduto: {
     flex: 1,
+    paddingLeft: 5,
   },
   nomeProduto: {
     fontSize: 18,

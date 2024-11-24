@@ -45,9 +45,9 @@ const Home = () => {
 
             {selectedCategory === "Início" ? (
                 <>
-                    <Carousel images={imagens} styles={styles} />
+                    <Carousel images={imagens} styles={styles}/>
 
-                    <CheapProductsList products={produtosBaratos} styles={styles} />
+                    <CheapProductsList products={produtosBaratos} styles={styles}/>
 
                     <StoreList
                         stores={lojasSuper}
@@ -67,7 +67,7 @@ const Home = () => {
                         stores={filteredStores}
                         title="Lojas"
                         styles={styles}
-                        renderCustomItem={(item) => <CardLoja item={item} />}
+                        renderCustomItem={(item) => <CardLoja item={item}/>}
                         horizontal={false}
                     />
 
@@ -77,11 +77,12 @@ const Home = () => {
                     stores={filteredStores}
                     title="Lojas"
                     styles={styles}
-                    renderCustomItem={(item) => <CardLoja item={item} />}
+                    renderCustomItem={(item) => <CardLoja item={item}/>}
                     horizontal={false}
                 />
             )}
         </ScrollView>
-);
+    );
+}
 
 export default Home;
