@@ -6,7 +6,7 @@ export const stores = [
         logo: 'https://s2.glbimg.com/IaEnP49buSdSUDftlMxVrq3-ZDo=/940x523/e.glbimg.com/og/ed/f/original/2019/04/26/loucosporti1.jpg',
         name: 'Hambúrgueria Top',
         star: 4.5,
-        frete: 'Gratis',
+        frete: 'R$ 5,00',
         distancia: '1,5 km',
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',

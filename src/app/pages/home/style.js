@@ -85,5 +85,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 10,
-    }
+    },
+    flat: {
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
 });
