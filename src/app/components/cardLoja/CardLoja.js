@@ -6,9 +6,9 @@ import icon from '../../../../assets/icons8-discount-40.png';
 const CardLoja = ({ item }) => {
   const navigation = useNavigation();
 
-  const handleNavigate = (item) => {
+  const handleNavigate = () => {
     navigation.navigate("DetalhesLoja", { loja: item });
-  };
+  };  
 
   return (
     <Pressable

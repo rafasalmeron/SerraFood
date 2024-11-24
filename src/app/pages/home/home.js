@@ -83,6 +83,5 @@ const Home = () => {
             )}
         </ScrollView>
 );
-};
 
 export default Home;

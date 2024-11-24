@@ -35,12 +35,12 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   cupomContainer: {
-    marginTop: 10,
-    padding: 10,
-    backgroundColor: '#f0f8ff',
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    // marginTop: 10,
+    // padding: 10,
+    // backgroundColor: '#f0f8ff',
+    // borderRadius: 5,
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   
   cupomTexto: {
@@ -98,6 +98,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginLeft: 20,
+    marginTop: 15,
     marginBottom: 15,
   },
   cardProduto: {
@@ -126,15 +127,33 @@ export const styles = StyleSheet.create({
     color: '#666',
     marginTop: 5,
   },
+  priceButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  },
   precoProduto: {
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 10,
     color: '#e91e63',
+    marginRight: 10,
   },
   imagemProduto: {
     width: 100,
     height: 100,
     borderRadius: 10,
+  },
+  addButton: {
+    backgroundColor: 'red',
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  addButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });

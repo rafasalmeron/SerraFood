@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import {SafeAreaView, StyleSheet} from "react-native";
+import React, { useEffect, useState } from 'react';
+import { SafeAreaView, StyleSheet } from "react-native";
 import FooterTab from "./components/footerTab/FooterTab";
 import LoadingScreen from "./components/loadingScreen/LoadingScreen";
 import { CartProvider } from './hooks/CartContext';
+import 'react-native-get-random-values';
 
-const  App = () => {
+const App = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -15,9 +16,9 @@ const  App = () => {
 
     return (
         <CartProvider>
-        <SafeAreaView style={styles.container}>
-            {loading ? <LoadingScreen /> : <FooterTab />}
-        </SafeAreaView>
+            <SafeAreaView style={styles.container}>
+                {loading ? <LoadingScreen /> : <FooterTab />}
+            </SafeAreaView>
         </CartProvider>
     )
 }
