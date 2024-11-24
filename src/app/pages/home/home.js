@@ -16,6 +16,9 @@ LogBox.ignoreAllLogs();
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState("Início");
+    const [nomeUsuario, setNomeUsuario] = useState(null);
+    const [carregando, setCarregando] = useState(true);
+  
 
     const imagens = [
         {id: 1, url: Banner1,},
@@ -34,59 +37,85 @@ const Home = () => {
     const lojasSuper = stores.filter((loja) => loja.lojaSuper !== '');
 
     const freteGratis = stores.filter((loja) => loja.frete === 'Gratis');
+    const carregarUsuario = async () => {
+      try {
+        const usuario = await AsyncStorage.getItem("@usuario");
+        if (usuario) {
+          const { name } = JSON.parse(usuario);
+          setNomeUsuario(name);
+        }
+      } catch (error) {
+        console.error("Erro ao carregar usuário:", error.message);
+      } finally {
+        setCarregando(false);
+      }
+    };
+    useEffect(() => {
+      carregarUsuario();
+    }, []);
+  
+    if (carregando) {
+      return (
+        <View style={styles.container}>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+      );
+    }
+  
 
     return (
-        <ScrollView style={styles.mainContainer}>
+      <><View style={styles.container}>
+        <Text style={styles.bemVindo}>
+          {nomeUsuario ? `Bem-vindo, ${nomeUsuario.name}!` : "Bem-vindo!"}
+        </Text>
+      </View><ScrollView style={styles.mainContainer}>
 
-            <View style={styles.header}>
-                <Image source={logoFood} style={styles.logo}/>
-                <Text style={styles.headerText}>Serra Food</Text>
-            </View>
+          <View style={styles.header}>
+            <Image source={logoFood} style={styles.logo} />
+            <Text style={styles.headerText}>Serra Food</Text>
+          </View>
 
-            <View style={styles.content}>
-                <Nav onCategorySelect={(category) => setSelectedCategory(category)}/>
-            </View>
+          <View style={styles.content}>
+            <Nav onCategorySelect={(category) => setSelectedCategory(category)} />
+          </View>
 
-            {selectedCategory === "Início" ? (
-                <>
-                    <Carousel images={imagens} styles={styles}/>
+          {selectedCategory === "Início" ? (
+            <>
+              <Carousel images={imagens} styles={styles} />
 
-                    <CheapProductsList products={produtosBaratos} styles={styles}/>
+              <CheapProductsList products={produtosBaratos} styles={styles} />
 
-                    <StoreList
-                        stores={lojasSuper}
-                        title="Lojas Super"
-                        styles={styles}
-                        horizontal={true}
-                    />
+              <StoreList
+                stores={lojasSuper}
+                title="Lojas Super"
+                styles={styles}
+                horizontal={true} />
 
-                    <StoreList
-                        stores={freteGratis}
-                        title="Loja com Frete Grátis"
-                        styles={styles}
-                        horizontal={true}
-                    />
+              <StoreList
+                stores={freteGratis}
+                title="Loja com Frete Grátis"
+                styles={styles}
+                horizontal={true} />
 
-                    <StoreList
-                        stores={filteredStores}
-                        title="Lojas"
-                        styles={styles}
-                        renderCustomItem={(item) => <CardLoja item={item}/>}
-                        horizontal={false}
-                    />
+              <StoreList
+                stores={filteredStores}
+                title="Lojas"
+                styles={styles}
+                renderCustomItem={(item) => <CardLoja item={item} />}
+                horizontal={false} />
 
-                </>
-            ) : (
-                <StoreList
-                    stores={filteredStores}
-                    title="Lojas"
-                    styles={styles}
-                    renderCustomItem={(item) => <CardLoja item={item}/>}
-                    horizontal={false}
-                />
-            )}
-        </ScrollView>
+            </>
+          ) : (
+            <StoreList
+              stores={filteredStores}
+              title="Lojas"
+              styles={styles}
+              renderCustomItem={(item) => <CardLoja item={item} />}
+              horizontal={false} />
+          )}
+        </ScrollView></>
     );
 }
+
 
 export default Home;
