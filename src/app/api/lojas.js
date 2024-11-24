@@ -3,10 +3,10 @@ import img from '../../../assets/star.png';
 export const stores = [
     {
         id: '1',
-        logo: 'https://loremflickr.com/200/300/food?lock=1',
+        logo: 'https://s2.glbimg.com/IaEnP49buSdSUDftlMxVrq3-ZDo=/940x523/e.glbimg.com/og/ed/f/original/2019/04/26/loucosporti1.jpg',
         name: 'Hambúrgueria Top',
         star: 4.5,
-        frete: 'Gratis',
+        frete: 'R$ 5,00',
         distancia: '1,5 km',
         tempoPreparo: '30-40 min',
         category: 'Hambúrgueres',
@@ -19,7 +19,7 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne 100% bovina com queijo cheddar, alface e tomate.",
-                photo: "https://loremflickr.com/200/300/food?lock=51",
+                photo: "https://www.kcms.com.br/blog/wp-content/uploads/2022/03/cardapio-de-hamburgueria-tradicional.jpg",
                 storeId: 1
             },
             {
@@ -28,7 +28,7 @@ export const stores = [
                 price: 27.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer artesanal com queijo cheddar, cebola caramelizada e molho especial.",
-                photo: "https://loremflickr.com/200/300/food?lock=52",
+                photo: "https://media.istockphoto.com/id/2061716709/pt/foto/grilled-rib-burger.jpg?s=2048x2048&w=is&k=20&c=4wSjb7tewMWXwQUpExn0ofN-fIDQ9llUgabRqN5P8EA=",
                 storeId: 1
             }
         ]
