@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from "react";
 import { FlatList, Image, View } from "react-native";
+
 
 const Carousel = ({ images, styles }) => {
     return (

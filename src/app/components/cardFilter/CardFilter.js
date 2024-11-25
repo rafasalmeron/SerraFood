@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {FlatList, TouchableOpacity, View} from "react-native";
 import CardLoja from "../cardLoja/CardLoja";
 import { styles } from "./style";

@@ -1,123 +1,124 @@
-import React from "react";
+import React, {useState} from "react";
 import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  TouchableOpacity,
-  Alert,
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    Alert,
 } from "react-native";
-import { useForm, Controller } from "react-hook-form";
-import * as Yup from "yup";
+import {buscarUsuario} from "../../api/loginApi";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { styles } from "./style";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { autenticarUsuario, buscarUsuario } from "../../api/loginApi";
-import { useNavigation } from "@react-navigation/native";
-
-const schema = Yup.object().shape({
-  email: Yup.string().email("E-mail inválido").required("E-mail é obrigatório"),
-  password: Yup.string().required("Senha é obrigatória"),
-});
+import {useNavigation} from "@react-navigation/native";
 
 const Login = () => {
-  const navigation = useNavigation();
-  
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+    const [isLogged, setIsLogged] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const navigation = useNavigation();
 
-  const onSubmit = async (data) => {
-    console.log(data);
-    try {
-      const response = await buscarUsuario();
-      console.log(response);
+    const validate = () => {
+        let isValid = true;
+        if (!email) {
+            setEmailError("E-mail é obrigatório");
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            setEmailError("E-mail inválido");
+            isValid = false;
+        } else {
+            setEmailError("");
+        }
 
-      const usuario = response.find((user) => {
-        return user.email === data.email && user.password === data.password;
-      });
+        if (!password) {
+            setPasswordError("Senha é obrigatória");
+            isValid = false;
+        } else {
+            setPasswordError("");
+        }
 
-      if (usuario) {
-        Alert.alert(
-          "Login bem-sucedido!",
-          `Bem-vindo, ${usuario.name || "Usuário"}!`,
-          [
-            {
-              text: "OK",
-              onPress: () =>
-                navigation.reset({
-                  index: 0,
-                  routes: [{ name: "Home" }], 
-                }),
-            },
-          ]
-        );
-      } else {
-        Alert.alert("Erro", "Usuário ou senha inválidos.");
-      }
-    } catch (error) {
-      Alert.alert("Erro", error.message || "Falha na autenticação.");
-    }
-  };
+        return isValid;
+    };
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Bem-vindo</Text>
-      <Text style={styles.subtitle}>Faça login para continuar</Text>
+    const onSubmit = async () => {
+        if (!validate()) {
+            return;
+        }
 
-      {}
-      <Text style={styles.label}>E-mail</Text>
-      <Controller
-        control={control}
-        name="email"
-        render={({ field: { onChange, value } }) => (
-          <TextInput
-            style={[styles.input, errors.email && styles.errorInput]}
-            placeholder="Digite seu e-mail"
-            keyboardType="email-address"
-            autoCapitalize="none"
-            value={value}
-            onChangeText={onChange}
-          />
-        )}
-      />
-      {errors.email && (
-        <Text style={styles.errorText}>{errors.email.message}</Text>
-      )}
+        try {
+            const response = await buscarUsuario();
 
-      {}
-      <Text style={styles.label}>Senha</Text>
-      <Controller
-        control={control}
-        name="password"
-        render={({ field: { onChange, value } }) => (
-          <TextInput
-            style={[styles.input, errors.password && styles.errorInput]}
-            placeholder="Digite sua senha"
-            secureTextEntry
-            value={value}
-            onChangeText={onChange}
-          />
-        )}
-      />
-      {errors.password && (
-        <Text style={styles.errorText}>{errors.password.message}</Text>
-      )}
+            if (response.length === 0) {
+                Alert.alert("Erro", "Usuário ou senha inválidos.");
+                return;
+            }
 
-      {}
-      <TouchableOpacity style={styles.button} onPress={handleSubmit(onSubmit)}>
-        <Text style={styles.buttonText}>Entrar</Text>
-      </TouchableOpacity>
+            const usuario = response.find(
+                (user) => user.email === email && user.password === password
+            );
 
-      {}
-      <TouchableOpacity>
-        <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
-      </TouchableOpacity>
-    </View>
-  );
+            if (usuario) {
+                console.log("Usuário:", usuario);
+                await AsyncStorage.setItem('@authToken', 'token_placeholder');
+                await AsyncStorage.setItem('@usuario', JSON.stringify(usuario));
+
+                Alert.alert(
+                    "Login bem-sucedido!",
+                    `Bem-vindo, ${usuario.name || "Usuário"}!`,
+                    'Você será redirecionado para a página principal.'
+                );
+
+                setTimeout(() => {
+                    navigation.reset({
+                        index: 0,
+                        routes: [{name: "MainApp"}],
+                    });
+                }, 1500);
+            } else {
+                Alert.alert("Erro", "Usuário ou senha inválidos.");
+            }
+        } catch (error) {
+            console.error('Erro ao realizar login:', error);
+            Alert.alert("Erro", error.message || "Falha na autenticação.");
+        }
+    };
+
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>Bem-vindo</Text>
+            <Text style={styles.subtitle}>Faça login para continuar</Text>
+
+            <Text style={styles.label}>E-mail</Text>
+            <TextInput
+                style={[styles.input, emailError && styles.errorInput]}
+                placeholder="Digite seu e-mail"
+                keyboardType="email-address"
+                autoCapitalize="none"
+                value={email}
+                onChangeText={setEmail}
+            />
+            {/*{emailError && <Text style={styles.errorText}>{emailError}</Text>}*/}
+
+            <Text style={styles.label}>Senha</Text>
+            <TextInput
+                style={[styles.input, passwordError && styles.errorInput]}
+                placeholder="Digite sua senha"
+                secureTextEntry
+                value={password}
+                onChangeText={setPassword}
+            />
+            {/*{passwordError && <Text style={styles.errorText}>{passwordError}</Text>}*/}
+
+            <TouchableOpacity style={styles.button} onPress={onSubmit}>
+                <Text style={styles.buttonText}>Entrar</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
+            </TouchableOpacity>
+        </View>
+    );
 };
 
 export default Login;
