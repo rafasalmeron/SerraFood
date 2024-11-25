@@ -1,17 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import {View, ImageBackground, TouchableOpacity, Text} from 'react-native';
-import {styles} from './style';
+import React, { useEffect, useState } from 'react';
+import { View, ImageBackground, TouchableOpacity, Text } from 'react-native';
+import { styles } from './style';
 import fundo from '../../../../assets/fundo.png';
-import {useNavigation} from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-
-const Perfil = () => {
+const Perfil = ({ setCurrentScreen }) => {
     const [userData, setUserData] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(null);
-    const navigation = useNavigation();
 
+    const goToHome = () => {
+        setCurrentScreen("Home");
+    };
+    const goToCadastro = () => {
+        setCurrentScreen("Cadastro");
+    };
+    const goToLogin = () => {
+        setCurrentScreen("Login");
+    };
     useEffect(() => {
         const fetchAuthenticationState = async () => {
             const authState = await AsyncStorage.getItem('@isAuthenticated');
@@ -33,7 +39,7 @@ const Perfil = () => {
             setIsAuthenticated(false);
             navigation.reset({
                 index: 0,
-                routes: [{name: 'Auth'}],
+                routes: [{ name: 'Home' }],
             });
         } catch (error) {
             console.error('Erro ao realizar logout:', error);
@@ -63,7 +69,7 @@ const Perfil = () => {
                     setIsAuthenticated(true);
                 } else {
                     setIsAuthenticated(false);
-                    navigation.navigate('Auth');
+                    navigation.navigate("Home");
                     console.log("Usuário não encontrado no AsyncStorage.");
                 }
             } catch (error) {
@@ -71,46 +77,41 @@ const Perfil = () => {
                 console.error('Erro ao buscar os dados do usuário:', error);
             }
         };
-            fetchUserData();
+        fetchUserData();
     }, []);
 
-
-
-    if(isAuthenticated === null) {
+    if (isAuthenticated === null) {
         return (
             <View>
                 <Text>Carregando...</Text>
             </View>
-        )
+        );
     }
 
     if (!isAuthenticated) {
         return (
-            <View style={{flex: 1}}>
-                <ImageBackground
-                    source={fundo}
-                    style={styles.topSection}
-                    resizeMode="cover"
-                >
+            <View style={{ flex: 1 }}>
+                <ImageBackground source={fundo} style={styles.topSection} resizeMode="cover">
                     <View style={styles.bottomSection}>
                         <TouchableOpacity
                             style={styles.button}
-                            onPress={() => navigation.navigate('Login')}
+                            onPress={goToLogin}
                         >
-                            <Text style={styles.buttonText}> Já tenho conta </Text>
+                            <Text style={styles.buttonText}>Já tenho conta</Text>
                         </TouchableOpacity>
-                        <View style={styles.spacing}/>
+                        <View style={styles.spacing} />
                         <TouchableOpacity
                             style={styles.button}
-                            onPress={() => navigation.navigate('Cadastro')}
+                            onPress={goToCadastro}
                         >
                             <Text style={styles.buttonText}>Criar nova conta</Text>
                         </TouchableOpacity>
                     </View>
                 </ImageBackground>
             </View>
-        )
+        );
     }
+
     return (
         <View style={styles.container}>
             <View>
@@ -135,7 +136,6 @@ const Perfil = () => {
                     </TouchableOpacity>
                 ))}
             </View>
-
         </View>
     );
 };

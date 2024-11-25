@@ -12,15 +12,13 @@ import {LogBox} from "react-native";
 import Banner1 from '../../../../assets/banner1.png';
 import Banner2 from '../../../../assets/banner2.png';
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {useRoute} from "@react-navigation/native";
 
+LogBox.ignoreAllLogs(true);
 
-const Home = () => {
+const Home = ({user}) => {
     const [selectedCategory, setSelectedCategory] = useState("Início");
     const [nomeUsuario, setNomeUsuario] = useState(null);
     const [carregando, setCarregando] = useState(true);
-    const route = useRoute();
-    const { user } = route.params || {};
     console.log('Usuário logado:', user);
 
 
