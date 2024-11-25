@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
     View,
     Text,
@@ -6,59 +6,81 @@ import {
     TouchableOpacity,
     Alert,
 } from "react-native";
+import {buscarUsuario} from "../../api/loginApi";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { styles } from "./style";
-import {buscarUsuario} from "../../api/loginApi";
+import {useNavigation} from "@react-navigation/native";
 
-const Login = ({ setCurrentScreen }) => {
+const Login = () => {
+    const [isLogged, setIsLogged] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const goToHome = () => {
-        setCurrentScreen("Home");
-    };
-    const goToCadastro = () => {
-        setCurrentScreen("Cadastro");
-    };
-    const validateInputs = () => {
-        if (!email || !/\S+@\S+\.\S+/.test(email)) {
-            Alert.alert("Erro", "Por favor, insira um e-mail válido.");
-            return false;
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const navigation = useNavigation();
+
+    const validate = () => {
+        let isValid = true;
+        if (!email) {
+            setEmailError("E-mail é obrigatório");
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            setEmailError("E-mail inválido");
+            isValid = false;
+        } else {
+            setEmailError("");
         }
 
         if (!password) {
-            Alert.alert("Erro", "Por favor, insira sua senha.");
-            return false;
+            setPasswordError("Senha é obrigatória");
+            isValid = false;
+        } else {
+            setPasswordError("");
         }
 
-        return true;
+        return isValid;
     };
 
-    const handleLogin = async () => {
-        if (!validateInputs()) return;
+    const onSubmit = async () => {
+        if (!validate()) {
+            return;
+        }
 
         try {
-            const users = await buscarUsuario();
+            const response = await buscarUsuario();
 
-            const user = users.find(
-                (u) => u.email === email && u.password === password
-            );
-
-            if (!user) {
+            if (response.length === 0) {
                 Alert.alert("Erro", "Usuário ou senha inválidos.");
                 return;
             }
 
-            await AsyncStorage.setItem("@authToken", "token_placeholder");
-            await AsyncStorage.setItem("@usuario", JSON.stringify(user));
-
-            Alert.alert(
-                "Sucesso",
-                `Bem-vindo, ${user.name || "Usuário"}!`,
-                [{ text: "OK", onPress: () => setCurrentScreen("Home") }]
+            const usuario = response.find(
+                (user) => user.email === email && user.password === password
             );
+
+            if (usuario) {
+                console.log("Usuário:", usuario);
+                await AsyncStorage.setItem('@authToken', 'token_placeholder');
+                await AsyncStorage.setItem('@usuario', JSON.stringify(usuario));
+
+                Alert.alert(
+                    "Login bem-sucedido!",
+                    `Bem-vindo, ${usuario.name || "Usuário"}!`,
+                    'Você será redirecionado para a página principal.'
+                );
+
+                setTimeout(() => {
+                    navigation.reset({
+                        index: 0,
+                        routes: [{name: "MainApp"}],
+                    });
+                }, 1500);
+            } else {
+                Alert.alert("Erro", "Usuário ou senha inválidos.");
+            }
         } catch (error) {
-            console.error("Erro ao realizar login:", error);
-            Alert.alert("Erro", "Ocorreu um erro ao tentar fazer login. Tente novamente.");
+            console.error('Erro ao realizar login:', error);
+            Alert.alert("Erro", error.message || "Falha na autenticação.");
         }
     };
 
@@ -69,32 +91,31 @@ const Login = ({ setCurrentScreen }) => {
 
             <Text style={styles.label}>E-mail</Text>
             <TextInput
-                style={styles.input}
+                style={[styles.input, emailError && styles.errorInput]}
                 placeholder="Digite seu e-mail"
                 keyboardType="email-address"
                 autoCapitalize="none"
                 value={email}
                 onChangeText={setEmail}
             />
+            {/*{emailError && <Text style={styles.errorText}>{emailError}</Text>}*/}
 
             <Text style={styles.label}>Senha</Text>
             <TextInput
-                style={styles.input}
+                style={[styles.input, passwordError && styles.errorInput]}
                 placeholder="Digite sua senha"
                 secureTextEntry
                 value={password}
                 onChangeText={setPassword}
             />
+            {/*{passwordError && <Text style={styles.errorText}>{passwordError}</Text>}*/}
 
-            <TouchableOpacity style={styles.button} onPress={handleLogin}>
+            <TouchableOpacity style={styles.button} onPress={onSubmit}>
                 <Text style={styles.buttonText}>Entrar</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => Alert.alert("Recuperação de Senha", "Função ainda não implementada.")}>
+            <TouchableOpacity>
                 <Text style={styles.forgotPassword}>Esqueci minha senha</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => setCurrentScreen("Cadastro")}>
-                <Text style={styles.forgotPassword}>Criar uma nova conta</Text>
             </TouchableOpacity>
         </View>
     );
