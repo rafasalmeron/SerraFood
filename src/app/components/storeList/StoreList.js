@@ -1,3 +1,4 @@
+import React from "react";
 import { FlatList, Text, View, Image } from "react-native";
 
 const StoreList = ({ stores, title, styles, renderCustomItem, horizontal }) => {

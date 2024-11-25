@@ -1,5 +1,7 @@
+import React from "react";
 import { FlatList, Text, View } from "react-native";
 import CardProduto from "../cardProduto/CardProduto";
+
 
 const CheapProductsList = ({ products, styles }) => {
     return (

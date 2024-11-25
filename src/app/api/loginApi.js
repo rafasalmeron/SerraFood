@@ -1,12 +1,13 @@
 import axios from 'axios';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const api = axios.create({
-  baseURL: 'https://6740b24bd0b59228b7f1096e.mockapi.io/api/v1', 
+  baseURL: 'https://6740b24bd0b59228b7f1096e.mockapi.io/api/v1/users',
 });
 
 export const adicionarUsuario = async (user) => {
   try {
-    const response = await api.post('/users/users', user); 
+    const response = await api.post('/users', user);
     return response.data;
   } catch (error) {
     console.error("Erro ao criar o usuário:", {
@@ -21,7 +22,7 @@ export const adicionarUsuario = async (user) => {
 
 export const buscarUsuario = async () => {
     try {
-      const response = await api.get('/users/users')
+      const response = await api.get('/users')
       return response.data;
     } catch (error) {
       console.error('Erro ao buscar usuários:', error)
@@ -50,17 +51,18 @@ export const buscarUsuario = async () => {
    };
 
 export const autenticarUsuario = async (email, password) => {
-  try {
-    const data = {  email: email, password: password };
-    console.log(data)
-    const response = await api.post(`${baseURL}/users/users`, data);
-    console.log(response)
-    return response.data; 
-  } catch (error) {
-    console.log(error.response)
-    if (error.response && error.response.data) {
-      throw new Error(error.response.data.message);
+    try {
+        const data = { email, password };
+        const response = await api.post('/users', data);
+
+        if (response.data.token) {
+            await AsyncStorage.setItem('@authToken', response.data.token);
+        }
+        return response.data;
+    } catch (error) {
+        if (error.response && error.response.data) {
+            throw new Error(error.response.data.message);
+        }
+        throw new Error('Erro ao realizar login. Tente novamente.');
     }
-    throw new Error('Erro ao realizar login. Tente novamente.');
-  }
 };
