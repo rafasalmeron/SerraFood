@@ -6,7 +6,6 @@ import {styles} from './style';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {adicionarUsuario} from '../../api/loginApi';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useNavigation} from "@react-navigation/native";
 
 const schema = Yup.object().shape({
     name: Yup.string().required('Nome é obrigatório'),
@@ -16,11 +15,13 @@ const schema = Yup.object().shape({
         .required('Senha é obrigatória'),
 });
 
-const SignupScreen = () => {
-    const navigation = useNavigation();
+const SignupScreen = ({ setCurrentScreen }) => {
     const {control, handleSubmit, reset, formState: {errors}} = useForm({
         resolver: yupResolver(schema),
     });
+    const goToLogin = () => {
+        setCurrentScreen("Login");
+    };
 
     const onSubmit = async (data) => {
         try {
@@ -37,7 +38,7 @@ const SignupScreen = () => {
             Alert.alert("Usuário cadastrado com sucesso!", "Você será redirecionado para o login.");
 
             setTimeout(() => {
-                navigation.navigate("Login");
+                goToLogin()
             }, 2000);
         } catch (error) {
             console.error("Erro ao criar o usuário:", error.response?.data || error.message);
