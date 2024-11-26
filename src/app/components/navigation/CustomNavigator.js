@@ -17,6 +17,7 @@ const CustomNavigator = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(null);
     const [currentScreen, setCurrentScreen] = useState("Perfil");
     const [screenHistory, setScreenHistory] = useState([]);
+    const [screenParams, setScreenParams] = useState({});
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -33,16 +34,23 @@ const CustomNavigator = () => {
         }
     }, [isAuthenticated]);
 
-    const navigateTo = (screen) => {
-        setScreenHistory((prev) => [...prev, currentScreen]);
+    const navigateTo = (screen, params = {}) => {
+        setScreenHistory((prev) => [...prev, { screen: currentScreen, params: screenParams }]);
         setCurrentScreen(screen);
+        setScreenParams(params);
     };
 
     const goBack = () => {
         setScreenHistory((prev) => {
             const newHistory = [...prev];
-            const previousScreen = newHistory.pop();
-            setCurrentScreen(previousScreen || "Perfil");
+            const previous = newHistory.pop();
+            if (previous) {
+                setCurrentScreen(previous.screen);
+                setScreenParams(previous.params);
+            } else {
+                setCurrentScreen("Perfil");
+                setScreenParams({});
+            }
             return newHistory;
         });
     };
@@ -54,27 +62,35 @@ const CustomNavigator = () => {
                     return <Perfil setCurrentScreen={navigateTo} />;
                 case "Cadastro":
                     return <Cadastro setCurrentScreen={navigateTo} />;
+                case "Login":
+                    return <Login setCurrentScreen={navigateTo} />;
                 default:
                     return <Login setCurrentScreen={navigateTo} />;
             }
         } else {
             switch (currentScreen) {
                 case "Home":
-                    return <Home />;
+                    return <Home setCurrentScreen={navigateTo}/>;
                 case "DetalhesLoja":
-                    return <DetalhesLoja />;
+                    return <DetalhesLoja setCurrentScreen={navigateTo} screenParams={screenParams} />;
                 case "Search":
-                    return <Search />;
+                    return <Search setCurrentScreen={navigateTo}/>;
                 case "Cart":
-                    return <CartPage />;
+                    return <CartPage setCurrentScreen={navigateTo}/>;
                 case "Pedidos":
-                    return <Pedidos />;
+                    return <Pedidos setCurrentScreen={navigateTo}/>;
                 case "DetalhesPedido":
-                    return <DetalhesPedido />;
+                    return (
+                    <DetalhesPedido
+                        setCurrentScreen={navigateTo}
+                        pedido={screenParams.pedido}
+                        loja={screenParams.loja}
+                    />
+                );
                 case "Perfil":
-                    return <Perfil />;
+                    return <Perfil setCurrentScreen={navigateTo}/>;
                 default:
-                    return <Home />;
+                    return <Home setCurrentScreen={navigateTo}/>;
             }
         }
     };

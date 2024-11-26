@@ -5,8 +5,8 @@ import { stores } from "../../api/lojas";
 import CardPedido from "../../components/cardPedido/CardPedido";
 import { styles } from "./style";
 
-const Pedidos = () => {
-    const { pedidos,  } = useContext(CartContext);
+const Pedidos = ({ setCurrentScreen }) => {
+    const { pedidos } = useContext(CartContext);
 
     const identificarLoja = (storeId) => {
         const loja = stores.find((store) => store.id === storeId);
@@ -31,6 +31,7 @@ const Pedidos = () => {
                             pedido={pedido}
                             loja={loja}
                             index={index}
+                            setCurrentScreen={setCurrentScreen}
                         />
                     );
                 })

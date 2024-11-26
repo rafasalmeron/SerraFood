@@ -2,8 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import {calcularPrevisaoEntrega} from "../../functions/calcularPrevisaoEntrega";
 
-const DetalhesDoPedido = ({ route }) => {
-    const { pedido, loja } = route.params;
+const DetalhesDoPedido = ({ loja, pedido }) => {
     const previsaoEntrega = calcularPrevisaoEntrega(loja.tempoPreparo);
 
     const calcularSubtotal = () => {

@@ -12,12 +12,15 @@ const Perfil = ({ setCurrentScreen }) => {
     const goToHome = () => {
         setCurrentScreen("Home");
     };
+
     const goToCadastro = () => {
         setCurrentScreen("Cadastro");
     };
+
     const goToLogin = () => {
         setCurrentScreen("Login");
     };
+
     useEffect(() => {
         const fetchAuthenticationState = async () => {
             const authState = await AsyncStorage.getItem('@isAuthenticated');
@@ -37,10 +40,7 @@ const Perfil = ({ setCurrentScreen }) => {
             await AsyncStorage.setItem('@isAuthenticated', 'false');
             setUserData(null);
             setIsAuthenticated(false);
-            navigation.reset({
-                index: 0,
-                routes: [{ name: 'Home' }],
-            });
+            goToHome();
         } catch (error) {
             console.error('Erro ao realizar logout:', error);
         }

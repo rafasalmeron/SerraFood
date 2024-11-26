@@ -13,12 +13,15 @@ import {buscarUsuario} from "../../api/loginApi";
 const Login = ({ setCurrentScreen }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const goToHome = () => {
         setCurrentScreen("Home");
     };
+
     const goToCadastro = () => {
         setCurrentScreen("Cadastro");
     };
+
     const validateInputs = () => {
         if (!email || !/\S+@\S+\.\S+/.test(email)) {
             Alert.alert("Erro", "Por favor, insira um e-mail válido.");

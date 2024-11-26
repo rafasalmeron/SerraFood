@@ -1,30 +1,28 @@
-import {View, Text, Image, ScrollView, ActivityIndicator} from "react-native";
-import React, {useEffect, useState} from "react";
+import { View, Text, Image, ScrollView, FlatList, ActivityIndicator } from "react-native";
+import React, { useEffect, useState } from "react";
 import Nav from "../../components/nav/Nav";
-import {styles} from "./style";
-import {stores} from "../../api/lojas";
+import { styles } from "./style";
+import { stores } from "../../api/lojas";
 import CardLoja from "../../components/cardLoja/CardLoja";
 import logoFood from "../../../../assets/LogoSerraFood3.png";
 import Carousel from "../../components/carrossel/Carrossel";
 import CheapProductsList from "../../components/produtosBaratos/ProdutosBaratos";
-import StoreList from "../../components/storeList/StoreList";
-import {LogBox} from "react-native";
+import { LogBox } from "react-native";
 import Banner1 from '../../../../assets/banner1.png';
 import Banner2 from '../../../../assets/banner2.png';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 LogBox.ignoreAllLogs(true);
 
-const Home = ({user}) => {
+const Home = ({ user, setCurrentScreen }) => {
     const [selectedCategory, setSelectedCategory] = useState("Início");
     const [nomeUsuario, setNomeUsuario] = useState(null);
     const [carregando, setCarregando] = useState(true);
     console.log('Usuário logado:', user);
 
-
     const imagens = [
-        {id: 1, url: Banner1,},
-        {id: 2, url: Banner2,},
+        { id: 1, url: Banner1 },
+        { id: 2, url: Banner2 },
     ];
 
     const filteredStores =
@@ -36,14 +34,11 @@ const Home = ({user}) => {
         .flatMap((loja) => loja.produtos)
         .filter((produto) => produto.price < 30);
 
-    const lojasSuper = stores.filter((loja) => loja.lojaSuper !== '');
-
-    const freteGratis = stores.filter((loja) => loja.frete === 'Gratis');
     const carregarUsuario = async () => {
         try {
             const usuario = await AsyncStorage.getItem("@usuario");
             if (usuario) {
-                const {name} = JSON.parse(usuario);
+                const { name } = JSON.parse(usuario);
                 setNomeUsuario(name);
             }
         } catch (error) {
@@ -52,6 +47,7 @@ const Home = ({user}) => {
             setCarregando(false);
         }
     };
+
     useEffect(() => {
         carregarUsuario().then(r => r);
     }, []);
@@ -59,68 +55,52 @@ const Home = ({user}) => {
     if (carregando) {
         return (
             <View style={styles.container}>
-                <ActivityIndicator size="large" color="#0000ff"/>
+                <ActivityIndicator size="large" color="#0000ff" />
             </View>
         );
     }
 
-
     return (
         <>
-            <View style={styles.container}>
-                <Text>
-                    {user ? `Bem-vindo, ${user.name}!` : "Bem-vindo!"}
-                </Text>
-            </View>
             <ScrollView style={styles.mainContainer}>
 
                 <View style={styles.header}>
-                    <Image source={logoFood} style={styles.logo}/>
+                    <Image source={logoFood} style={styles.logo} />
                     <Text style={styles.headerText}>Serra Food</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Nav onCategorySelect={(category) => setSelectedCategory(category)}/>
+                    <Nav onCategorySelect={(category) => setSelectedCategory(category)} />
                 </View>
 
                 {selectedCategory === "Início" ? (
                     <>
-                        <Carousel images={imagens} styles={styles}/>
+                        <Carousel images={imagens} styles={styles} />
 
-                        <CheapProductsList products={produtosBaratos} styles={styles}/>
+                        <CheapProductsList products={produtosBaratos} styles={styles} />
 
-                        <StoreList
-                            stores={lojasSuper}
-                            title="Lojas Super"
-                            styles={styles}
-                            horizontal={true}/>
-
-                        <StoreList
-                            stores={freteGratis}
-                            title="Loja com Frete Grátis"
-                            styles={styles}
-                            horizontal={true}/>
-
-                        <StoreList
-                            stores={filteredStores}
-                            title="Lojas"
-                            styles={styles}
-                            renderCustomItem={(item) => <CardLoja item={item}/>}
-                            horizontal={false}/>
-
+                        <FlatList
+                            data={filteredStores}
+                            keyExtractor={(item) => item.id.toString()}
+                            renderItem={({ item }) => (
+                                <CardLoja loja={item} setCurrentScreen={setCurrentScreen} />
+                            )}
+                            horizontal={false}
+                        />
                     </>
                 ) : (
-                    <StoreList
-                        stores={filteredStores}
-                        title="Lojas"
-                        styles={styles}
-                        renderCustomItem={(item) => <CardLoja item={item}/>}
-                        horizontal={false}/>
+                    <FlatList
+                        data={filteredStores}
+                        keyExtractor={(item) => item.id.toString()}
+                        renderItem={({ item }) => (
+                            <CardLoja loja={item} setCurrentScreen={setCurrentScreen} />
+                        )}
+                        horizontal={false}
+                    />
                 )}
             </ScrollView>
         </>
     );
-}
-
+};
 
 export default Home;
