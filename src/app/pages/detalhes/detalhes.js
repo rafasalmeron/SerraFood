@@ -4,17 +4,14 @@ import {
     Text,
     View,
     FlatList,
-    TouchableOpacity,
+    TouchableOpacity
 } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
-import { useRoute, useNavigation } from '@react-navigation/native';
 import { styles } from "./style";
 import { CartContext } from '../../hooks/CartContext';
 
-const DetalhesLoja = () => {
-    const route = useRoute();
-    const navigation = useNavigation();
-    const { loja } = route.params;
+const DetalhesLoja = ({ screenParams, setCurrentScreen }) => {
+    const { loja } = screenParams;
     const { addItem } = useContext(CartContext);
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -23,16 +20,15 @@ const DetalhesLoja = () => {
         return produto.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
-    const lidarComProduto = (idProduto) => {
-        console.log('Produto selecionado:', idProduto);
-    };
-
     return (
         <FlatList
             data={produtosFiltrados}
             ListHeaderComponent={() => (
                 <View>
-                    <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
+                    <TouchableOpacity
+                        style={styles.botaoVoltar}
+                        onPress={() => setCurrentScreen("Home")}
+                    >
                         <Icon name="arrow-back" size={30} color="#fff" />
                     </TouchableOpacity>
 

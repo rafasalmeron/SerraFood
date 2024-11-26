@@ -1,63 +1,60 @@
-import React, { useEffect, useState } from "react";
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { styles } from "./style";
 import icon from '../../../../assets/icons8-discount-40.png';
 
-const CardLoja = ({ item }) => {
-  const navigation = useNavigation();
+const CardLoja = ({ loja, setCurrentScreen }) => {
 
-  const handleNavigate = () => {
-    navigation.navigate("DetalhesLoja", { loja: item });
-  };  
+  const goToDetalhesLoja = () => {
+    setCurrentScreen("DetalhesLoja", { loja: loja });
+  };
 
   return (
-    <Pressable
-      onPress={() => handleNavigate(item)}
-      style={styles.storeItem}
-    >
-      <Image
-        source={{ uri: item.logo }}
-        style={styles.logoLojas}
-      />
-      <View style={styles.content}>
-        <View style={styles.content2}>
-          <Text style={styles.storeText}>{item.name}</Text>
-          {item.lojaSuper && (
-            <Image
-              source={item.lojaSuper}
-              style={styles.super}
-            />
-          )}
-        </View>
+      <Pressable
+          onPress={goToDetalhesLoja}
+          style={styles.storeItem}
+      >
+        <Image
+            source={{uri: loja.logo}}
+            style={styles.logoLojas}
+        />
+        <View style={styles.content}>
+          <View style={styles.content2}>
+            <Text style={styles.storeText}>{loja.name}</Text>
 
-        <View style={styles.content2}>
-          <Text style={styles.text2}>★ {item.star} </Text>
-          <Text style={styles.text3}> ⦁ </Text>
-          <Text style={styles.text3}> {item.category} </Text>
-          <Text style={styles.text3}> ⦁ </Text>
-          <Text style={styles.text3}> {item.distancia}</Text>
-        </View>
+                <Image
+                    source={ loja.lojaSuper}
+                    style={styles.super}
+                />
+          </View>
 
-        <View style={styles.content2}>
-          <Text style={styles.text3}> {item.tempoPreparo} </Text>
-          <Text style={styles.text3}> ⦁ </Text>
-          <Text style={styles.text4}> {item.frete}</Text>
-        </View>
+          <View style={styles.content2}>
+            <Text style={styles.text2}>★ {loja.star} </Text>
+            <Text style={styles.text3}> ⦁ </Text>
+            <Text style={styles.text3}> {loja.category} </Text>
+            <Text style={styles.text3}> ⦁ </Text>
+            <Text style={styles.text3}> {loja.distancia}</Text>
+          </View>
 
-        <View style={styles.content3}>
-          {item.cupom && (
-            <Text style={styles.text5}>
-              <Image
-                source={icon}
-                style={styles.iconDiscount}
-              />
-              {item.cupom}
-            </Text>
-          )}
+          <View style={styles.content2}>
+            <Text style={styles.text3}> {loja.tempoPreparo} </Text>
+            <Text style={styles.text3}> ⦁ </Text>
+            <Text style={styles.text4}> {loja.frete}</Text>
+          </View>
+
+          <View style={styles.content3}>
+            {loja.cupom && (
+                <Text style={styles.text5}>
+                  <Image
+                      source={icon}
+                      style={styles.iconDiscount}
+                  />
+                  {loja.cupom}
+                </Text>
+            )}
+          </View>
         </View>
-      </View>
-    </Pressable>
+      </Pressable>
   );
 };
 

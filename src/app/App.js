@@ -5,6 +5,7 @@ import LoadingScreen from "./components/loadingScreen/LoadingScreen";
 import {CartProvider} from './hooks/CartContext';
 import 'react-native-get-random-values';
 import {NavigationContainer} from "@react-navigation/native";
+import CustomNavigator from "./components/navigation/CustomNavigator";
 
 const App = () => {
     const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ const App = () => {
                     loading ? <LoadingScreen /> :
 
                     <NavigationContainer>
-                        <RootNavigator/>
+                        <CustomNavigator />
                     </NavigationContainer>
                 }
             </SafeAreaView>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#f9f9f9',
-        paddingTop: 10,
+        paddingTop: 20,
     },
 });
 

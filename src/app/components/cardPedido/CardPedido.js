@@ -1,22 +1,18 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from './style';
-import {useNavigation} from "@react-navigation/native";
 
-const CardPedido = ({ pedido, loja, index }) => {
-    const navigation = useNavigation();
+const CardPedido = ({ pedido, loja, index, setCurrentScreen }) => {
     const produtos = pedido.items
         .map((produto) => produto.name)
         .join(", ");
 
+    const goToDetalhes = () => {
+        setCurrentScreen("DetalhesPedido", { pedido, loja });
+    };
     return (
         <TouchableOpacity
-            onPress={() =>
-                navigation.navigate("DetalhesPedido", {
-                    pedido,
-                    loja,
-                })
-            }
+            onPress={goToDetalhes}
             key={pedido.id}
             style={styles.conteinerCard}
         >

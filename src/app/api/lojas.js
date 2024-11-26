@@ -3,7 +3,7 @@ import img from '../../../assets/star.png';
 export const stores = [
     {
         id: '1',
-        logo: 'https://s2.glbimg.com/IaEnP49buSdSUDftlMxVrq3-ZDo=/940x523/e.glbimg.com/og/ed/f/original/2019/04/26/loucosporti1.jpg',
+        logo: 'https://picsum.photos/200/300',
         name: 'Hambúrgueria Top',
         star: 4.5,
         frete: 'R$ 5,00',
@@ -19,7 +19,7 @@ export const stores = [
                 price: 24.99,
                 category: "Hambúrgueres",
                 description: "Hambúrguer de carne 100% bovina com queijo cheddar, alface e tomate.",
-                photo: "https://www.kcms.com.br/blog/wp-content/uploads/2022/03/cardapio-de-hamburgueria-tradicional.jpg",
+                photo: 'https://www.kcms.com.br/blog/wp-content/uploads/2022/03/cardapio-de-hamburgueria-tradicional.jpg',
                 storeId: 1
             },
             {
